@@ -1,0 +1,69 @@
+/*-------------------------------------------*/
+/*  26 - Components - Testimonial
+/*-------------------------------------------*/
+.testimonial-area{
+    background-image: url('../images/testimonial/bg-1.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+    padding: 75px 0 80px;
+    margin-top: 80px;
+    .testimonial-slider{
+        .slide-item{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            .slide-inner{
+                .single-slide{
+                    .slide-content{
+                        span{
+                            &.primary-text_color{
+                                padding-bottom: 10px;
+                                display: block;
+                            }
+                        }
+                        > h3{
+                            &.user-name{
+                                color: $bg-white_color;
+                                margin-bottom: 0;
+                                padding-bottom: 55px;
+                            }
+                        }
+                        .comment-box{
+                            background-color: rgba(0,0,0,0.2);
+                            border: 1px solid rgba(255,255,255,0.2);
+                            padding: 50px 0;
+                            width: 1170px;
+                            margin: 0 auto;
+                            @include breakpoint(max-large){
+                                width: auto;
+                            }
+                            > p{
+                                &.user-feedback{
+                                    color: $bg-white_color;
+                                    font-size: 24px;
+                                    line-height: 40px;
+                                    margin: 0 auto;
+                                    max-width: 90%;
+                                    @include breakpoint(max-small){
+                                        font-size: 15px;
+                                        line-height: 28px;
+                                    }
+                                    @include breakpoint(xx-small){
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .slide-image{
+                        padding: 30px 0 0;
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+}

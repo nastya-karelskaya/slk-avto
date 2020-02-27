@@ -1,0 +1,743 @@
+/*----------------------------------------*/
+/*  03 - Utilities - Helper
+/*----------------------------------------*/
+/* ---Uren's Custom Container--- */
+.container-fluid{
+	padding: 0 75px;
+	@include breakpoint(max-x_large){
+		padding: 0 30px;
+	}
+}
+
+/* ---Uren's Preloader---*/
+.loading {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: $bg-black_color;
+	z-index: 9999999999999;
+	.middle {
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		.lds-ellipsis {
+			display: inline-block;
+			position: relative;
+			width: 64px;
+			height: 64px;
+			div {
+				position: absolute;
+				top: 27px;
+				width: 11px;
+				height: 11px;
+				border-radius: 50%;
+				background: $primary-color;
+				animation-timing-function: cubic-bezier(0, 1, 1, 0);
+				&:nth-child(1) {
+					left: 6px;
+					animation: lds-ellipsis1 0.6s infinite;
+				}
+				&:nth-child(2) {
+					left: 6px;
+					animation: lds-ellipsis2 0.6s infinite;
+				}
+				&:nth-child(3) {
+					left: 26px;
+					animation: lds-ellipsis2 0.6s infinite;
+				}
+				&:nth-child(4) {
+					left: 45px;
+					animation: lds-ellipsis3 0.6s infinite;
+				}
+			}
+		}
+	}
+}
+
+@keyframes lds-ellipsis1 {
+	0% {
+		transform: scale(0);
+	}
+	100% {
+		transform: scale(1);
+	}
+}
+@keyframes lds-ellipsis3 {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(0);
+	}
+}
+@keyframes lds-ellipsis2 {
+	0% {
+		transform: translate(0, 0);
+	}
+	100% {
+		transform: translate(19px, 0);
+	}
+}
+/* ---Uren's Product Sticker---*/
+.sticker,
+.sticker-2 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 45px;
+	height: 20px;
+	line-height: 21px;
+	font-size: 11px;
+	text-transform: uppercase;
+	text-align: center;
+	background: $primary-color;
+	color: $bg-white_color;
+	text-transform: uppercase;
+	cursor: text;
+	font-weight: $heading-font_weight;
+}
+.sticker-area-2{
+	.sticker-2 {
+		background: $bg-orange-red_color;
+		top: 0;
+		&:before {
+			border-color: $bg-orange-red_color transparent transparent transparent;
+		}
+	}
+	.sticker {
+		top: 30px;
+	}
+}
+
+/* ---Uren's Section Title--- */
+.section-title_area {
+	text-align: center;
+	margin: 0 auto;
+	> span{
+		padding-bottom: 10px;
+		display: block;
+		font-size: 16px;
+	}
+	> h3{
+		font-size: 30px;
+		margin-bottom: 0;
+		padding-bottom: 50px;
+		font-weight: 600;
+		@include breakpoint(xx-small){
+			font-size: 22px;
+		}
+	}
+	&.bg--white{
+		padding-top: 55px;
+	}
+}
+
+/* ---Uren's Spacing Between Slide Item & Other Related Stuff---*/
+
+.slick-gutter{
+	&-30{
+		.slick-list {
+			margin-left: -15px;
+			margin-right: -15px;
+			.slick-slide {
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+		}
+	}
+}
+
+/* ---Slick Disabled Cursor Point--- */
+.slick-disabled {
+	cursor: not-allowed !important; 
+}
+
+/* ---Only For Single Product Page | Spacing Between Slide Item--- */
+.sp-images {
+	.slick-list {
+		margin-left: 0;
+		.slick-slide {
+			margin-left: 0;
+		}
+	}
+}
+
+/* ---Uren's Spacing Between Two Row---*/
+.best-selling_slider {
+	.slick-active div:first-child .product-slide_item {
+		border-bottom: 1px solid $border-color;
+	}
+}
+
+/* ---Tab Content & Pane Fix--- */
+.tab-content {
+	width: 100%;
+	.tab-pane {
+		display: block;
+		height: 0;
+		max-width: 100%;
+		visibility: hidden;
+		overflow: hidden;
+		opacity: 0;
+		&.active {
+			height: auto;
+			visibility: visible;
+			opacity: 1;
+			overflow: visible;
+		}
+	}
+}
+
+/* ---Uren's Rating Box Empty Star Color--- */
+.rating-box {
+	> ul {
+		> li {
+			> i{
+				color: $primary-color;
+				font-size: 16px;
+			}
+			&.silver-color {
+				> i {
+					color: $bg-silver_color !important;
+				}
+			}
+		}
+	}
+}
+
+/* ---Uren's Global Overlay--- */
+.global-overlay {
+	background-color: rgba($heading-color, .9);
+	@extend %basetransition;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 1000;
+	visibility: hidden;
+	&.overlay-open {
+		visibility: visible;
+	}
+}
+
+/* ---Uren's Tag--- */
+.uren-tags_list {
+	li {
+		display: inline-block;
+		margin-bottom: 5px;
+		a {
+			font-size: 14px;
+			border: 1px solid $border-color;
+			padding: 5px 15px;
+			display: block;
+			line-height: 20px;
+			&:hover {
+				color: $bg-white_color !important;
+				background-color: $primary-color;
+				border-color: $primary-color;
+			}
+		}
+	}
+}
+
+/* ---Uren's Pagination--- */
+.uren-paginatoin-area {
+	padding-top: 30px;
+	display: flex;
+	justify-content: center;
+	.uren-pagination-box {
+		padding: 10px 0;
+		display: flex;
+		justify-content: center;
+		border-radius: $uren-border_radius;
+		li {
+			display: inline-block;
+			> a {
+				color: $heading-color;
+				padding: 0 25px;
+				display: block;
+				@include breakpoint(xx-small){
+					padding: 0 15px;
+				}
+			}
+		}
+		&.carlet-color{
+			border: 2px solid $bg-carlet_color;
+			> li{
+				&:last-child {
+					> a {
+						border-right: 0;
+					}
+				}
+				&.active{
+					> a{
+						color: $bg-carlet_color;
+					}
+				}
+				> a{
+					border-right: 1px solid $bg-carlet_color;
+					&:hover{
+						color: $bg-carlet_color !important;
+					}
+				}
+			}
+		}
+		&.primary-color{
+			border: 2px solid $primary-color;
+			> li{
+				&:last-child {
+					> a {
+						border-right: 0;
+					}
+				}
+				&.active{
+					> a{
+						color: $primary-color;
+					}
+				}
+				> a{
+					border-right: 1px solid $primary-color;
+					&:hover{
+						color: $primary-color !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* ---Uren's ScrollUp--- */
+#scrollUp {
+	background-color: $bg-carlet_color;
+	color: $bg-white_color !important;
+	text-transform: uppercase;
+	right: 15px;
+	bottom: 15px;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	overflow: hidden;
+	border-radius: 100%;
+	z-index: 1000 !important;
+	&:hover {
+		background-color: $primary-color;
+		> i {
+			animation: alisSlideInUp 1s infinite;
+		}
+	}
+}
+
+/* ---Uren's Tooltip--- */
+.tooltip{
+	z-index: 10;
+}
+.tooltip-inner {
+	max-width: 200px;
+	padding: 0 8px;
+	height: 30px;
+	line-height: 27px;
+	color: #fff;
+	text-align: center;
+	border-radius: .25rem;
+}
+.tooltip.bs-tooltip-auto[x-placement^=top] .arrow::before,
+.tooltip.bs-tooltip-top .arrow::before {
+	content: "";
+	border-width: 5px 5px 0;
+}
+
+/* ---Uren's Quantity--- */
+.quantity {
+	.cart-plus-minus {
+		position: relative;
+		width: 76px;
+		text-align: left;
+		> .cart-plus-minus-box {
+			border: 1px solid $border-color;
+			height: 46px;
+			text-align: center;
+			width: 48px;
+			background: $bg-white_color;
+		}
+		> .qtybutton {
+			border-bottom: 1px solid $border-color;
+			border-right: 1px solid $border-color;
+			border-top: 1px solid $border-color;
+			cursor: pointer;
+			height: 23px;
+			line-height: 20px;
+			position: absolute;
+			text-align: center;
+			@extend %basetransition;
+			width: 28px;
+			line-height: 21px;
+			&:hover {
+				background: $bg-whisper_color;
+			}
+			&.dec {
+				bottom: 0;
+				right: 0;
+			}
+			&.inc {
+				border-bottom: none;
+				top: 0;
+				right: 0;
+			}
+		}
+	}
+}
+
+/* ---Uren's  Nice Select Customization--- */
+.myniceselect {
+	&.nice-select {
+		padding: 0;
+		margin: 0;
+		height: auto;
+		line-height: auto;
+		span {
+			height: 30px;
+			line-height: 30px;
+			display: inline-block;
+			padding: 0 60px;
+		}
+		.list {
+			width: 100%;
+		}
+	}
+}
+
+/* ---Base Transition--- */
+%basetransition {
+	@include transition(all .3s ease-in);
+}
+
+/* ---Range Slider--- */
+.price-filter {
+	padding-top: 35px;
+	.ui-widget-content {
+		background-color: $border-color;
+		border: none;
+		border-radius: 0;
+		box-shadow: none;
+		cursor: pointer;
+		height: 10px;
+		margin: 0 0 25px;
+		width: 100%;
+		border-top-left-radius: 25px;
+		-moz-border-radius-topleft: 25px;
+		border-top-right-radius: 25px;
+		-moz-border-radius-topright: 25px;
+		border-bottom-left-radius: 25px;
+		-moz-border-radius-bottomleft: 25px;
+		border-bottom-right-radius: 25px;
+		-moz-border-radius-bottomright: 25px;
+	}
+	.ui-slider-range {
+		background: $primary-color;
+		border: none;
+		box-shadow: none;
+		height: 100%;
+	}
+	.ui-slider-handle {
+		border: 2px solid $primary-color;
+		display: block;
+		width: 20px;
+		height: 20px;
+		line-height: 20px;
+		margin: 0;
+		text-align: center;
+		top: 50%;
+		border-radius: 100%;
+		box-shadow: 0px 0px 6.65px .35px rgba(0, 0, 0, 0.15);
+		-webkit-transform: translate(0, -50%);
+		transform: translate(0, -50%);
+		@extend %basetransition;
+		cursor: pointer;
+		&:focus{
+			border: 2px solid $primary-color;
+			outline: 0;
+		}
+		&:last-child {
+			-webkit-transform: translate(-100%, -50%);
+			transform: translate(-100%, -50%);
+		}
+		&:hover{
+			background-color: $primary-color;
+		}
+	}
+	.price-slider-amount {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		.label-input {
+			label {
+				color: #222;
+				font-size: 14px;
+				margin: 0;
+				text-transform: capitalize;
+			}
+			input {
+				background: transparent none repeat scroll 0 0;
+				border: medium none;
+				box-shadow: none;
+				color: #222;
+				font-size: 14px;
+				height: inherit;
+				padding-left: 5px;
+				width: 99px;
+			}
+		}
+	}
+}
+
+/* ---Color List Area--- */
+.color-list_area {
+	border: 1px solid $border-color;
+	padding: 25px;
+	@include breakpoint (max-x_small) {
+		padding: 15px;
+	}
+	.color-list_heading {
+		padding-bottom: 15px;
+		> h4 {
+			text-transform: uppercase;
+			margin-bottom: 0;
+			@include breakpoint (max-x_small) {
+				font-size: 14px;
+			}
+		}
+	}
+	.sub-title {
+		display: block;
+		padding-bottom: 20px;
+	}
+	.color-list {
+		display: -webkit-inline-box;
+		display: -ms-inline-flexbox;
+		display: inline-flex;
+		position: relative;
+		@include breakpoint(xx-small){
+			padding-bottom: 25px;
+			overflow: hidden;
+		}
+		.single-color {
+			border: 1px solid $border-color;
+			display: inline-block;
+			margin-right: 5px;
+			padding: 2px;
+			width: 25px;
+			height: 25px;
+			span {
+				width: 100%;
+				height: 100%;
+				&.bg-red_color {
+					background-color: $bg-red_color;
+					display: block;
+				}
+				&.burnt-orange_color {
+					background-color: $burnt-orange_color;
+					display: block;
+				}
+				&.brown_color {
+					background-color: $brown_color;
+					display: block;
+				}
+				&.raw-umber_color {
+					background-color: $raw-umber_color;
+					display: block;
+				}
+				&.black_color {
+					background-color: $bg-black_color;
+					display: block;
+				}
+				&.golden_color {
+					background-color: $primary-color;
+					display: block;
+				}
+			}
+			&.active {
+				border-color: $primary-color;
+				.color-text {
+					color: $heading-color;
+					display: block;
+				}
+			}
+		}
+		.color-text {
+			position: absolute;
+			right: -120px;
+			width: auto !important;
+			top: 0;
+			display: none;
+			@include breakpoint (max-x_small) {
+				right: -110px;
+			}
+			@include breakpoint(xx-small){
+				right: auto;
+				left: 0;
+				top: 30px;
+			}
+		}
+	}
+}
+
+/* ---Uren's Image Hover Effect--- */
+.img-hover_effect {
+	@extend %basetransition;
+	&:hover{
+		opacity: 0.7;
+	}
+}
+.img-hover-effect_area{
+	.slick-list{
+		padding: 15px;
+		margin: -15px;
+		height: auto !important;
+	}
+	.single-product{
+		@extend %basetransition;
+		&:hover{
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+		}
+	}
+}
+
+.img-hover-effect_area-2{
+	@extend %basetransition;
+	&:hover {
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	}
+}
+
+/* ---Uren's Newsletters Popup--- */
+.popup_wrapper {
+	background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
+	height: 100%;
+	opacity: 0;
+	position: fixed;
+	@extend %basetransition;
+	visibility: hidden;
+	width: 100%;
+	z-index: 9999999;
+	@include breakpoint (max-medium) {
+		display: none;
+	}
+	.test {
+		background: $bg-white_color;
+		background-image: url('../images/newsletters/bg-1.jpg');
+		background-position: right;
+		background-size: contain;
+		background-repeat: no-repeat;
+		height: 425px;
+		left: 50%;
+		margin: auto;
+		width: 970px;
+		padding: 50px 60px 50px;
+		position: absolute;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		@include breakpoint (max-large) {
+			width: 810px;
+		}
+		.popup_off {
+			background: $bg-nero_color;
+			color: $bg-white_color;
+			top: 0;
+			right: 0;
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			display: block;
+			cursor: pointer;
+			position: absolute;
+			text-align: center;
+			text-transform: uppercase;
+			@extend %basetransition;
+			font-size: 20px;
+			&:hover{
+				background-color: $primary-color;
+			}
+		}
+	}
+	.subscribe_area {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		height: 100%;
+		> h2 {
+			color: $heading-color;
+			font-weight: 600;
+			font-size: 30px;
+			text-transform: capitalize;
+			margin-bottom: 0;
+			padding-bottom: 20px;
+		}
+		> p {
+			margin: 0;
+			max-width: 580px;
+			padding-bottom: 25px;
+			color: $heading-color;
+			font-size: 16px;
+		}
+		.subscribe-form-group {
+			display: flex;
+			justify-content: center;
+			form {
+				&.subscribe-form{
+					position: relative;
+					input {
+						background: $bg-white_color;
+						border: 1px solid $border-color !important;
+						color: $heading-color;
+						border: 0 none;
+						height: 50px;
+						padding: 0 150px 0 20px;
+						width: 520px;
+						&::placeholder{
+							color: $heading-color;
+						}
+					}
+					button {
+						font-weight: $heading-font_weight;
+						background: $primary-color;
+						color: $heading-color;
+						top: 0;
+						right: 0;
+						position: absolute;
+						width: 130px;
+						height: 50px;
+						line-height: 50px;
+						border: 0;
+						display: block;
+						text-transform: uppercase;
+						@extend %basetransition;
+						&:hover{
+							background-color: $bg-carlet_color;
+							color: $bg-white_color !important;
+						}
+					}
+				}
+				}
+		}
+		.subscribe-bottom {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			padding-top: 25px;
+			input {
+				margin-right: 5px;
+			}
+			label {
+				margin-bottom: 0;
+				color: $heading-color;
+			}
+		}
+	}
+}

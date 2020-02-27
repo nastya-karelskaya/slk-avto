@@ -1,0 +1,103 @@
+.delivery-about_nav {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.delivery-about_grid {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.delivery-about_item_content a {
+  color: #0c2a5c;
+}
+
+.delivery-companies_list {
+  padding-left: 40px;
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+
+.delivery-companies_list li {
+  list-style-type: disc;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.delivery-companies_list li a {
+  font-size: 14px;
+  color: #0c2a5c;
+}
+
+.delivery-companies .short_desc {
+  padding-bottom: 0 !important;
+}
+
+.delivery-companies .overview-img {
+  height: 300px;
+  background: url(../images/delivery/delivery.jpg) center no-repeat;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 75px 0 80px;
+  margin-top: 80px;
+  position: relative;
+}
+
+.delivery-page {
+  background: url(../images/reviews/bg.jpg) center no-repeat;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 75px 0 80px;
+  margin-top: 80px;
+  position: relative;
+}
+
+.delivery-page:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #0c2a5c;
+  opacity: .3;
+}
+
+.delivery-page .contact-page-title {
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 500;
+  margin-bottom: 0;
+  padding-bottom: 20px;
+  color: #ffffff;
+}
+
+.delivery-page .contact-page-subtitle {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.delivery-page .contact-form-content {
+  margin: 0px auto 0px auto;
+}
+
+.delivery-page .contact-form-content .contact-form {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.delivery-page .contact-form-content .contact-form .form-group label {
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.delivery-page .contact-form-content .contact-form .form-group input, .delivery-page .contact-form-content .contact-form .form-group textarea {
+  background-color: transparent;
+  border-color: #999999;
+}
+/*# sourceMappingURL=custom-delivery-and-price.css.map */

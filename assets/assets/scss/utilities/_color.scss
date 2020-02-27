@@ -1,0 +1,69 @@
+/*----------------------------------------*/
+/*  04 - Utilities - Color
+/*----------------------------------------*/
+
+/* ---Backgroud Color | Only For HTML Markup---*/
+.bg--white_smoke {
+	background-color: $white-smoke_color;
+}
+.bg--white {
+	background-color: $bg-white_color;
+}
+
+.bg--night_rider {
+	background-color: $body-text_color;
+}
+
+.bg--silver {
+	background-color: $bg-silver_color;
+}
+.bg--nero {
+	background-color: $bg-nero_color;
+}
+.bg--black {
+	background-color: $bg-black_color;
+}
+.bg--sapphire {
+	background-color: $bg-sapphire_color;
+}
+.bg--primary {
+	background-color: $primary-color;
+}
+
+/* ---Text Color | Only For HTML Markup---*/
+.primary-text_color{
+	color: $primary-color !important;
+}
+.carlet-text_color{
+	color: $bg-carlet_color !important;
+}
+
+/* ---Activation Color--- */
+.header-main_area, 
+.header-main_area-2{
+	.main-nav{
+		> ul{
+			> li{
+				&.active{
+					> a{
+						color: $primary-color !important;
+					}
+				}
+			}
+		}
+	}
+}
+
+.header-main_area-3{
+	.main-nav{
+		> ul{
+			> li{
+				&.active{
+					> a{
+						color: $bg-carlet_color !important;
+					}
+				}
+			}
+		}
+	}
+}	

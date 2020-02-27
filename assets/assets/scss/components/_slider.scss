@@ -1,0 +1,181 @@
+/*----------------------------------------*/
+/*  11 - Components - Slider
+/*----------------------------------------*/
+/* --Slider Area One--- */
+.uren-slider_area {
+	.main-slider {
+		.slider-content {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			left: 15%;
+			> span{
+				font-weight: $heading-font_weight;
+				text-transform: uppercase;
+				color: $bg-white_color;
+				padding-bottom: 25px;
+				font-size: 24px;
+				display: block;
+				@include breakpoint(max-small){
+					font-size: 15px;
+					padding-bottom: 15px;
+				}
+			}
+			> h3{
+				text-transform: uppercase;
+				color: $bg-white_color;
+				position: relative;
+				font-size: 70px;
+				padding-bottom: 30px;
+				margin-bottom: 35px;
+				@include breakpoint(max-small){
+					font-size: 25px;
+					padding-bottom: 15px;
+					margin-bottom: 15px;
+				}
+				&:before{
+					background-color: $primary-color;
+					position: absolute;
+					content: "";
+					height: 3px;
+					width: 70px;
+					bottom: 0;
+				}
+			}
+			> h4{
+				font-weight: $body-font_weight;
+				color: $bg-white_color;
+				font-size: 28px;
+				margin-bottom: 0;
+				padding-bottom: 25px;
+				@include breakpoint(max-small){
+					padding-bottom: 20px;
+					font-size: 20px;
+				}
+				> span{
+					color: $primary-color;
+				}
+			}
+		}
+		.slick-arrow{
+			@include breakpoint(max-small){
+				display: none !important;
+			}
+		}
+	}
+	&.uren-slider_area-2{
+		padding-top: 80px;
+		.main-slider{
+			.slider-content{
+				left: 6.2%;
+			}
+		}
+		.banner-wrap{
+			[class*="col"]{
+				&:not(:last-child){
+					.banner-item{
+						margin-bottom: 30px;
+						@include breakpoint(medium){
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+	&.uren-slider_area-3{
+		.main-slider{
+			.slider-content{
+				text-align: center;
+				left: 6.2%;
+				@include breakpoint(max-small){
+					text-align: left;
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+				}
+				> h3{
+					color: $bg-nero_color;
+					font-size: 48px;
+					@include breakpoint(max-small){
+						font-size: 32px;
+					}
+					&:before{
+						background-color: $bg-carlet_color;
+						left: 50%;
+						transform: translateX(-50%);
+						@include breakpoint(max-small){
+							left: auto;
+							transform: none;
+						}
+					}
+				}
+				> p{
+					color: $bg-nero_color;
+					margin-bottom: 0;
+					padding-bottom: 20px;
+					@include breakpoint(max-small){
+						max-width: 70%;
+					}
+					@include breakpoint(xx-small){
+						max-width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
+/* --Slider Background Image-- */
+// Home One
+.bg-1,
+.bg-2 {
+	background-image: url('../images/slider/1.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	min-height: 610px;
+	@include breakpoint (max-small) {
+		min-height: 380px;
+	}
+}
+.bg-2 {
+	background-image: url('../images/slider/2.jpg');
+}
+// Home Two
+.bg-3,
+.bg-4 {
+	background-image: url('../images/slider/3.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	min-height: 550px;
+	@include breakpoint(normal){
+		min-height: 480px;
+	}
+	@include breakpoint (xx-small) {
+		min-height: 380px;
+	}
+}
+.bg-4 {
+	background-image: url('../images/slider/4.jpg');
+}
+// Home Two
+.bg-5,
+.bg-6 {
+	background-image: url('../images/slider/5.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	min-height: 610px;
+	@include breakpoint (max-small) {
+		min-height: 380px;
+	}
+}
+.bg-6 {
+	background-image: url('../images/slider/6.jpg');
+}
+
+/* ---Slider Dots--- */
+.main-slider {
+	@include uren-slick_dots;
+}

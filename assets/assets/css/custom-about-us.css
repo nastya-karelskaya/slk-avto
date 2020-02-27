@@ -1,0 +1,188 @@
+.about-us_breadcrumbs {
+  background-image: url(../images/about-us/company.jpg);
+  position: relative;
+}
+
+.about-us_breadcrumbs:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000000;
+  opacity: .4;
+}
+
+.about-us_info .overview-img {
+  height: 200px;
+  width: 100%;
+  background: url(../images/about-us/1.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.about-us_info .overview-img:first-child {
+  margin-top: 30px;
+}
+
+.about-us_info .overview-img:last-child {
+  margin-top: 20px;
+}
+
+.about-us_info .overview-content > .short_desc {
+  padding-bottom: 15px;
+  font-size: 15px;
+}
+
+.about-us_car-grid {
+  padding-top: 0;
+  margin-top: 15px;
+}
+
+.about-us_car-grid .cars-grid {
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: row !important;
+          flex-direction: row !important;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 100%;
+  width: 100%;
+}
+
+.about-us_car-grid .cars-grid:last-child {
+  -webkit-box-flex: unset !important;
+  -ms-flex: unset !important;
+  flex: unset !important;
+  max-width: unset !important;
+}
+
+.about-us_car-grid .cars-grid-nav {
+  padding: 15px;
+}
+
+.about-us_car-grid .cars-grid .shipping-content {
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+.about-us_car-grid .cars-grid .shipping-content a {
+  color: #0c2a5c;
+  font-size: 15px;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.about-us_car-models .shipping-nav {
+  padding: 10px;
+}
+
+.about-us_car-models .shipping-grid {
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: normal !important;
+      -ms-flex-direction: row !important;
+          flex-direction: row !important;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about-us_car-models .shipping-content {
+  font-size: 13px;
+  padding: 0px 5px;
+}
+
+.about-us_car-models .shipping-content a {
+  color: #333333;
+}
+
+.about-us_count {
+  background: url(../images/about-us/car-road.jpg) center no-repeat;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  padding: 75px 0 50px;
+  margin-top: 80px;
+  position: relative;
+}
+
+.about-us_count:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #ffffff;
+  opacity: .9;
+}
+
+.about-us_count .section_title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.about-us_count .single-count {
+  margin-bottom: 50px;
+}
+
+.about-us_count .single-count .count-icon i {
+  color: #0c2a5c;
+}
+
+.about-us_count .single-count .count-title {
+  margin-top: 15px;
+  padding: 0px 20px;
+}
+
+.about-us_count .single-count .count-title span {
+  color: #ffc400;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.2px;
+  margin: 15px 0 5px;
+  text-transform: none;
+}
+
+.about-us_service {
+  padding-left: 30%;
+  text-align: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 30px;
+}
+
+.about-us_service .short_desc {
+  margin-bottom: 10px;
+}
+
+.about-us_service .short_desc i {
+  color: #ffc400;
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.about-us_service .short_desc h4 {
+  display: inline;
+  font-size: 20px;
+  color: #0c2a5c;
+}
+
+.about-us_service-list {
+  padding-left: 40px;
+}
+
+.about-us_service-list li {
+  list-style-type: disc;
+  margin-top: 5px;
+  color: #333333;
+}
+
+.about-us_form {
+  padding-top: 80px;
+}
+/*# sourceMappingURL=custom-about-us.css.map */

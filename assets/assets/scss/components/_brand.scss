@@ -1,0 +1,27 @@
+/*----------------------------------------*/
+/*  21 - Components - Brand
+/*----------------------------------------*/
+.uren-brand_area{
+    padding: 75px 0 80px;
+}
+
+.brand-slider{
+    border: 1px solid $border-color;
+    .slide-item{
+        .inner-slide{
+            .single-product{
+                border-right: 1px solid $border-color;
+                display: flex;
+                justify-content: center;
+                padding: 20px 0;
+            }
+        }
+    }
+    .last-active{
+        .inner-slide{
+            .single-product{
+                border-right: 0;
+            }
+        }
+    }
+}

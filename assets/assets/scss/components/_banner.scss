@@ -1,0 +1,218 @@
+/*----------------------------------------*/
+/*  14 - Components - Banner
+/*----------------------------------------*/
+.uren-banner_area{
+	padding: 80px 0 0;
+	&.bg--white_smoke{
+		padding-bottom: 80px;
+	}
+	.banner-item{
+		position: relative;
+		cursor: pointer;
+		.banner-img-1{
+			background-image: url('../images/banner/1-1.jpg');
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+			min-height: 435px;
+			@include breakpoint(xx-small){
+				min-height: 320px;
+			}
+			&.banner-img-2{
+				background-image: url('../images/banner/1-2.jpg');
+			}
+		}
+		.banner-content{
+			position: absolute;
+			top: 50%;
+			left: 8.5%;
+			transform: translateY(-50%);
+			> span{
+				&.offer{
+					text-transform: uppercase;
+					color: $primary-color;
+					font-size: 16px;
+					display: block;
+					padding-bottom: 15px;
+					@include breakpoint(max-x_large){
+						padding-bottom: 10px;
+					}
+					@include breakpoint(normal){
+						padding-bottom: 5px;
+						font-size: 14px;
+					}
+				}
+			}
+			> h4,
+			h3{
+				font-weight: $body-font_weight;
+				color: $bg-white_color;
+				margin-bottom: 0;
+				font-size: 34px;
+				text-transform: uppercase;
+				@include breakpoint(max-x_large){
+					font-size: 28px;
+				}
+				@include breakpoint(normal){
+					font-size: 20px;
+				}
+			}
+			> h3{
+				font-weight: $heading-font_weight;
+				position: relative;
+				padding-top: 5px;
+				padding-bottom: 40px;
+				@include breakpoint(max-x_large){
+					padding-bottom: 15px;
+				}
+				&:before{
+					background-color: $primary-color;
+					content: "";
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 70px;
+					height: 2px;
+				}
+			}
+			> p{
+				color: $bg-white_color;
+				max-width: 55%;
+				margin-bottom: 0;
+				padding-top: 30px;
+				@include breakpoint(max-x_large){
+					padding-top: 10px;
+				}
+				@include breakpoint(normal){
+					max-width: 84%;
+					font-size: 13px;
+				}
+				@include breakpoint(max-small){
+					max-width: 84%;
+					font-size: 13px;
+				}
+				@include breakpoint(xx-small){
+					max-width: 100%;
+				}
+			}
+			> .uren-btn-ps_left{
+				padding-top: 25px;
+				@include breakpoint(max-x_large){
+					padding-top: 15px;
+				}
+				@include breakpoint(normal){
+					padding-top: 10px;
+				}
+				.uren-btn{
+					width: 130px;
+				}
+			}
+		}
+	}
+	[class*="col-"]{
+		&:not(:last-child){
+			@include breakpoint(max-medium){
+				margin-bottom: 30px;
+			}
+		}
+	}
+}
+
+.uren-banner_area-3{
+	.banner-item{
+		.banner-img{
+			background-image: url('../images/banner/1-6.jpg');
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+			min-height: 590px;
+			@include breakpoint(max-medium){
+				border: 1px solid $border-color;
+				min-height: 450px;
+				background-position: left;
+			}
+			@include breakpoint(xx-small){
+				min-height: 320px;
+			}
+		}
+		.banner-content{
+			text-align: center;
+			left: auto;
+			@include breakpoint(max-large){
+				text-align: left;
+			}
+			@include breakpoint(max-medium){
+				text-align: center;
+			}
+			span{
+				&.contact-info{
+					font-weight: $heading-font_weight;
+					color: $bg-carlet_color;
+					font-size: 24px;
+					@include breakpoint(max-large){
+						font-size: 16px;
+					}
+				}
+			}
+			> h4{
+				font-weight: $body-font_weight;
+				text-transform: uppercase;
+				color: $heading-color;
+				padding-top: 30px;
+				font-size: 40px;
+				@include breakpoint(max-large){
+					padding-top: 10px;
+					font-size: 25px;
+				}
+				@include breakpoint(xx-small){
+					font-size: 20px;
+				}
+			}
+			> h3{
+				font-weight: $heading-font_weight;
+				color: $heading-color;
+				font-size: 60px;
+				padding-bottom: 0;
+				@include breakpoint(max-large){
+					font-size: 30px;
+				}
+				@include breakpoint(xx-small){
+					font-size: 25px;
+				}
+				&:before{
+					display: none;
+				}
+			}
+			> p{
+				color: inherit;
+				margin: 0 auto;
+				padding-top: 5px;
+				@include breakpoint(max-large){
+					margin: 0;
+					max-width: 65%;
+				}
+				@include breakpoint(max-medium){
+					margin: 0 auto;
+				}
+				@include breakpoint(xx-small){
+					max-width: 100%;
+				}
+			}
+			> a{
+				&.read-more{
+					font-weight: $heading-font_weight;
+					text-transform: uppercase;
+					color: $primary-color;
+					padding-top: 45px;
+					display: block;
+					@include breakpoint(max-large){
+						padding-top: 15px;
+					}
+					&:hover{
+						color: $bg-carlet_color !important;
+					}
+				}
+			}
+		}
+	}
+}

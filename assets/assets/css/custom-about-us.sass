@@ -1,0 +1,157 @@
+$dark-blue: #0c2a5c
+$yellow: #ffc400 
+
+.about-us
+  &_breadcrumbs
+    background-image: url(../images/about-us/company.jpg)
+    position: relative
+    &:before 
+      content: ""
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      background: #000000
+      opacity: .4
+
+  &_info
+    .overview-img
+      height: 200px
+      width: 100%
+      background: url(../images/about-us/1.jpg) center no-repeat
+      background-size: cover
+      &:first-child 
+        margin-top: 30px
+      &:last-child 
+        margin-top: 20px
+
+    .overview-content > .short_desc
+      padding-bottom: 15px
+      font-size: 15px
+
+  &_car
+    &-grid 
+      padding-top: 0
+      margin-top: 15px
+      .cars
+        &-grid 
+          flex-direction: row !important
+          flex-wrap: wrap
+          max-width: 100%
+          width: 100%
+          &:last-child 
+            -webkit-box-flex: unset !important
+            -ms-flex: unset !important
+            flex: unset !important
+            max-width: unset !important
+        
+
+          &-nav 
+            padding: 15px
+
+          .shipping
+            &-content 
+              display: inline-block
+              padding: 5px 10px
+              a 
+                color: $dark-blue 
+                font-size: 15px
+                text-decoration: underline
+                font-weight: bold
+
+      .cars-grid-area .cars-grid-nav .cars-grid, .cars-grid-area .cars-grid-nav .cars-grid:last-child
+        
+
+    &-models 
+      
+      .shipping
+        &-nav 
+          padding: 10px
+        &-grid
+          flex-direction: row !important
+          flex-wrap: wrap
+          text-align: center
+          justify-content: center
+
+        &-content
+          font-size: 13px
+          padding: 0px 5px
+          a
+            color: #333333
+
+
+  &_count
+    background: url(../images/about-us/car-road.jpg) center no-repeat
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+    padding: 75px 0 50px
+    margin-top: 80px
+    position: relative
+   
+    &:before 
+      content: ""
+      width: 100%
+      height: 100%
+      position: absolute
+      top: 0
+      left: 0
+      background: #ffffff
+      opacity: .9
+
+
+    .section_title 
+      text-align: center
+      margin-bottom: 50px
+
+    .single
+      &-count
+       
+        margin-bottom: 50px
+
+        .count
+          &-icon 
+            i 
+              color: $dark-blue
+          &-title 
+            margin-top: 15px
+            padding: 0px 20px
+            span 
+              color: $yellow
+              font-size: 20px
+              font-weight: bold
+              letter-spacing: 0.2px
+              margin: 15px 0 5px
+              text-transform: none
+              
+  &_service
+    padding-left: 30%
+    text-align: center
+    width: fit-content
+    margin-bottom: 30px
+
+    .short_desc 
+      margin-bottom: 10px
+      i 
+        color: $yellow
+        font-size: 20px
+        margin-right: 5px
+
+      h4 
+        display: inline
+        font-size: 20px
+        color: $dark-blue 
+
+    &-list 
+      padding-left: 40px
+      li 
+        list-style-type: disc
+        margin-top: 5px
+        color: #333333
+
+
+  &_form 
+    padding-top: 80px
+
+  &_car-models

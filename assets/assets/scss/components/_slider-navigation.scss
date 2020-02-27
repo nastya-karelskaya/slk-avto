@@ -1,0 +1,113 @@
+/*-------------------------------------------*/
+/*  25 - Components - Slider Navigation
+/*-------------------------------------------*/
+.slider-navigation_style-1,
+.slider-navigation_style-3 {
+	.slick-arrow {
+		background-color: #e9e9e9;
+		border: 1px solid transparent;
+		font-size: 24px;
+		width: 50px;
+		height: 50px;
+		line-height: 50px;
+		display: block;
+		color: $heading-color;
+		text-align: center;
+		position: absolute;
+		z-index: 8;
+		cursor: pointer;
+		border-radius: $uren-border_radius;
+		top: 50%;
+		-moz-transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+		opacity: 0;
+		visibility: hidden;
+		left: 20px;
+		@include breakpoint (max-small) {
+			display: none !important;
+		}
+		&:hover {
+			background-color: $bg-white_color;
+			border-color: $primary-color;
+		}
+	}
+	.slick-next,
+	.tty-slick-text-next {
+		left: auto;
+		right: 20px;
+	}
+	&:hover {
+		.slick-arrow {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+
+.slider-navigation_style-2 {
+	.slick-arrow {
+		font-size: 55px;
+		display: block;
+		color: rgba(255,255,255,0.7);
+		text-align: center;
+		position: absolute;
+		z-index: 8;
+		cursor: pointer;
+		top: 50%;
+		transform: translateY(-50%);
+		opacity: 0;
+		visibility: hidden;
+		left: 20px;
+		&:hover {
+			color: $primary-color;
+		}
+	}
+	.slick-next {
+		left: auto;
+		right: 20px;
+	}
+	&:hover {
+		.slick-arrow {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}
+.slider-navigation_style-3{
+	.slick-arrow{
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		font-size: 16px;
+		&:hover{
+			color: $primary-color;
+		}
+	}
+}
+
+.slider-navigation_style-4{
+	.slick-arrow{
+		background-color: $primary-color;
+		color: $bg-white_color;
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		@extend %basetransition;
+		&:hover{
+			background-color: $bg-carlet_color;
+		}
+		&.tty-slick-text-prev{
+			margin-bottom: 5px;
+		}
+		&.tty-slick-text-next{
+			margin-top: 5px;
+		}
+		> i{
+			transform: rotate(87deg);
+			display: block;
+		}
+	}
+}

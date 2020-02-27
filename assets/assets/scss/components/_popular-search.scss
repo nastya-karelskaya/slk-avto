@@ -1,0 +1,29 @@
+/*----------------------------------------*/
+/*  23 - Components - Popular Search
+/*----------------------------------------*/
+.popular-search_area{
+    padding: 25px 0 20px;
+    .popular-search{
+        display: flex;
+        justify-content: center;
+        @include breakpoint(max-small){
+            text-align: center;
+            display: block;
+        }
+        label {
+            display: inline-block;
+            vertical-align: top;
+            margin: 0;
+            font-size: 16px;
+            font-weight: 700;
+            color: #e52e06;
+            text-transform: uppercase;
+            @include breakpoint(max-small){
+                display: block;
+            }
+        }
+        a{
+            margin-left: 5px;
+        }
+    }
+}

@@ -1,0 +1,27 @@
+.before-product-page .product-slide_item .inner-slide .single-product {
+  margin-top: 0 !important;
+}
+
+.before-product-page .product-slide_item .inner-slide .single-product:hover > .product-content {
+  opacity: 1;
+}
+
+.before-product-page .product-slide_item .inner-slide .single-product .product-content .product-desc_info h6 {
+  margin-top: 15px;
+}
+
+.before-product-page .product-slide_item .inner-slide .single-product .product-content .uren-btn {
+  margin: 20px auto 0 auto;
+  font-size: 14px;
+  width: 155px;
+}
+
+.before-product-page .uren-paginatoin-area {
+  margin-top: 50px;
+  text-align: center;
+}
+
+#vk_groups {
+  width: 100%;
+}
+/*# sourceMappingURL=custom-beforeproductpage.css.map */

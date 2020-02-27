@@ -1,0 +1,73 @@
+.sp-product-tab_area {
+  margin-bottom: 70px;
+}
+
+.sp-product-tab_area .product-description .single-contact-block {
+  margin-bottom: 30px;
+}
+
+.sp-product-tab_area .product-description .single-contact-block h4 {
+  display: inline;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.sp-product-tab_area .product-description .single-contact-block h4 i {
+  margin-right: 10px;
+  color: #ffc400;
+}
+
+.sp-product-tab_area .product-description .single-contact-block a {
+  color: #0c2a5c;
+  text-decoration: underline;
+  font-size: 18px;
+}
+
+.sp-product-tab_area .product-description .contact-form form .form-group label {
+  display: block;
+  font-size: 15px;
+  line-height: 29px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  cursor: text;
+}
+
+.sp-product-tab_area .product-description .contact-form form .form-group input {
+  background-color: #ffffff;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  outline: none;
+  border: 1px solid #e5e5e5;
+  padding-left: 20px;
+}
+
+.sp-product-tab_area .product-description .contact-form form .form-group textarea {
+  background-color: #ffffff;
+  width: 100%;
+  outline: none;
+  border: 1px solid #e5e5e5;
+  padding-left: 20px;
+  line-height: 50px;
+  height: 200px;
+}
+
+.sp-product-tab_area .product-description .contact-form form .form-group button {
+  line-height: 12px;
+  display: inline-block;
+  padding: 16px 30px;
+  border-radius: 3px;
+  font-weight: 500;
+  font-size: 12px;
+  background-color: #999999;
+  border: 1px solid #999999;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.sp-product-tab_area .product-description .contact-form form .form-group button:hover {
+  background-color: #ffc400;
+  color: #ffffff;
+  border-color: #ffc400;
+}
+/*# sourceMappingURL=custom-singular.css.map */

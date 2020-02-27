@@ -1,0 +1,89 @@
+/*-------------------------------------------*/
+/*  24 - Components - Featured Categories
+/*-------------------------------------------*/
+.featured-categories_area{
+    padding: 75px 0 0;
+    .featured-categories_slider,
+    .featured-categories_slider-2{
+        .slide-item{
+            .slide-inner{
+                background-color: #fcfcfc;
+                border: 1px solid #ededed;
+                display: flex;
+                padding: 60px 0;
+                @include breakpoint(max-x_small){
+                    display: block;
+                }
+                .slide-image_area{
+                    width: 40%;
+                    @include breakpoint(max-x_small){
+                        width: 100%;
+                    }
+                    > a{
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+                .slide-content_area{
+                    width: 60%;
+                    padding-left: 15px;
+                    @include breakpoint(max-x_small){
+                        width: 100%;
+                        padding: 15px 0 0 15px;
+                    }
+                    > h3{
+                        font-size: 16px;
+                        font-weight: 600;
+                        margin-bottom: 0;
+                        padding-bottom: 10px;
+                    }
+                    > span{
+                        font-size: 16px;
+                        color: #0886cf;
+                        padding-bottom: 15px;
+                        display: block;
+                    }
+                    .product-item {
+                        > li{
+                            > a{
+                                > i{
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                    .uren-btn-ps_left{
+                        padding-top: 20px;
+                        .uren-btn{
+                            width: 140px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.featured-categories_area-2{
+        padding: 80px 0;
+        .featured-categories_slider-2{
+            border: 1px solid $border-color;
+            .slide-item{
+                .slide-inner{
+                    display: block;
+                    text-align: center;
+                    padding: 0;
+                    border-left: 0;
+                    border-top: 0;
+                    border-bottom: 0;
+                    .slide-image_area{
+                        width: 100%;
+                    }
+                    .slide-content_area{
+                        padding-left: 0;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

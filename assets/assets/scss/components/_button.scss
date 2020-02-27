@@ -1,0 +1,153 @@
+/*----------------------------------------*/
+/*  10 - Components - Button
+/*----------------------------------------*/
+/* --Uren's Search Button-- */
+.uren-search_btn {
+	background: transparent;
+	border: 0;
+	position: absolute;
+	right: 10px;
+	top: 15px;
+	color: $input-placeholder_color;
+	&:hover {
+		color: $primary-color;
+	}
+}
+
+/* ---Uren's Button Position--- */
+// Center
+.uren-btn-ps_center {
+	display: flex;
+	justify-content: center;
+	&.uren-btn-ps_left {
+		justify-content: flex-start;
+	}
+	&.uren-btn-ps_right {
+		justify-content: flex-end;
+	}
+}
+
+/* --Uren's Button-- */
+.uren-btn,
+.uren-btn-2,
+.uren-banner_btn,
+.uren-btn-bondi_blue,
+.uren-btn_fullwidth,
+.uren-compare_btn,
+.uren-filter_btn,
+.uren-btn_dark,
+.uren-btn_limerick {
+	background-color: $primary-color;
+	color: $heading-color;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0);
+	width: 175px;
+	height: 45px;
+	line-height: 45px;
+	display: block;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 600;
+	@extend %basetransition;
+	font-size: 16px;
+	border-radius: $uren-border_radius;
+	@include breakpoint (max-small) {
+		width: 140px;
+		height: 30px;
+		line-height: 29px;
+		font-size: 14px;
+	}
+	&:hover{
+		background-color: $bg-carlet_color;
+		color: $bg-white_color !important;
+	}
+	&.uren-btn-2{
+		background-color: $bg-carlet_color;
+		color: $bg-white_color !important;
+		&:hover{
+			background-color: $primary-color;
+		}
+	}
+}
+
+/* ---Uren's Button With Color Variation--- */
+.uren-btn-bondi_blue {
+	background-color: $primary-color;
+	color: $bg-white_color;
+	&:hover {
+		background-color: $body-text_color;
+		color: $bg-white_color !important;
+	}
+}
+.uren-btn_dark {
+	background: $body-text_color;
+	color: $bg-white_color;
+	width: 150px;
+	height: 40px;
+	line-height: 38px;
+	font-weight: 600;
+	border: 0;
+}
+.uren-btn_limerick {
+	background-color: $primary-color;
+	color: $bg-white_color;
+	width: 120px;
+	height: 40px;
+	line-height: 40px;
+	&:hover {
+		background-color: $heading-color;
+	}
+}
+/* ---Uren's Button With Various Sizes--- */
+.uren-btn_fullwidth {
+	background-color: $dim-gray_color;
+	width: 100%;
+	color: $bg-white_color;
+	text-transform: uppercase;
+}
+// Small Size
+.uren-btn_sm {
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	font-size: 13px;
+	font-weight: $body-font_weight;
+}
+/* ---Uren's Other Button--- */
+.uren-banner_btn {
+	box-shadow: 0px 1px 6.79px 0.21px rgba(0, 0, 0, 0.13);
+	height: 40px;
+	line-height: 40px;
+}
+.uren-compare_btn {
+	background: $primary-color;
+	color: $bg-white_color;
+	height: 40px;
+	line-height: 43px;
+	font-size: 14px;
+	&:hover {
+		background-color: $body-text_color;
+	}
+}
+.fb-filter-btn_area {
+	padding-top: 30px;
+	.uren-filter_btn {
+		background-color: $body-text_color;
+		color: $bg-white_color;
+		display: block;
+		width: 120px;
+		height: 40px;
+		line-height: 40px;
+		font-size: 14px;
+		font-weight: $body-font_weight;
+		border-radius: 0;
+		&:before {
+			content: "\f00d";
+			font-family: 'Font Awesome 5 Free';
+			font-weight: 600;
+			padding-right: 10px;
+		}
+		&:hover {
+			background-color: $primary-color;
+		}
+	}
+}
