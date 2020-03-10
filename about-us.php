@@ -1134,7 +1134,7 @@ get_header('common');
                         <div class="contact-form-content">
                             <!-- <h3 class="contact-page-title">Tell Us Your Message</h3> -->
                             <div class="contact-form">
-                                <form id="contact-form" action="http://hasthemes.com/file/mail.php" method="post">
+                                <!-- <form id="contact-form" action="http://hasthemes.com/file/mail.php" method="post">
                                     <div class="form-group">
                                         <label>Ваше имя: <span class="required">*</span></label>
                                         <input type="text" name="con_name" id="con_name" required>
@@ -1143,10 +1143,7 @@ get_header('common');
                                         <label>Ваш телефон: <span class="required">*</span></label>
                                         <input type="email" name="con_email" id="con_email" required>
                                     </div>
-                                    <!-- <div class="form-group">
-                                        <label>Subject</label>
-                                        <input type="text" name="con_subject" id="con_subject">
-                                    </div> -->
+                                    
                                     <div class="form-group form-group-2">
                                         <label>Сообщение:</label>
                                         <textarea name="con_message" id="con_message"></textarea>
@@ -1154,7 +1151,8 @@ get_header('common');
                                     <div class="form-group">
                                         <button type="submit" value="submit" id="submit" class="uren-contact-form_btn" name="submit">Отправить</button>
                                     </div>
-                                </form>
+                                </form> -->
+                                <?php echo do_shortcode('[contact-form-7 id="134" title="Контактная форма на странице О нас"]') ?>
                             </div>
                             <p class="form-messege"></p>
                         </div>

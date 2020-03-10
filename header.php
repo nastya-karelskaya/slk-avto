@@ -12,14 +12,14 @@
 ?>
 
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="<?php bloginfo( 'language' ); ?>">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Uren - Car Accessories Shop HTML Template</title>
-    <meta name="robots" content="noindex, follow" />
-    <meta name="description" content="">
+    <title><?php bloginfo( 'name' ); ?></title>
+    <!-- <meta name="robots" content="noindex, follow" /> -->
+    <meta name="description" content="<?php bloginfo( 'description' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
     <!-- <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico"> -->
@@ -52,9 +52,10 @@
                     <div class="row">
                         <div class="col-xl-2 col-lg-2 col-md-3 col-sm-5">
                             <div class="header-logo_area">
-                                <a href="index.html">
-                                    <img src="<?php echo get_template_directory_uri() . '/assets/assets/images/menu/logo/1.png';?>" alt="Логотип">
-                                </a>
+                                <!-- <a href="index.html">
+                                    <img src="<?php //echo get_template_directory_uri() . '/assets/assets/images/menu/logo/1.png';?>" alt="Логотип">
+                                </a> -->
+                                <?php echo get_custom_logo(); ?>
                             </div>
                         </div>
                         <div class="col-xl-5 col-lg-6 d-none d-lg-block">
@@ -77,10 +78,16 @@
                                         </a>
                                     </li>
                                     <li class="call-us_wrap phone_wrap">
-                                        <a href="tel:+123123321345"><i class="ion-android-call"></i>+123 321 345</a>
+                                        <a href="tel:<?php echo trim(get_option('slk_phone'));?>"><i class="ion-android-call"></i>
+                                            <?php echo trim(get_option('slk_phone'));?>
+                                            <!-- +123 321 345 -->
+                                        </a>
                                     </li>
                                     <li class="contact-us_wrap">
-                                        <a href="mailto:slk-avto@yandex.ru"><i class="fa fa-envelope"></i>slk-avto@yandex.ru</a>
+                                        <a href="mailto:<?php echo trim(get_option('slk_email'));?>"><i class="fa fa-envelope"></i>
+                                            <?php echo trim(get_option('slk_email'));?>
+                                            <!-- slk-avto@yandex.ru -->
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -113,40 +120,14 @@
                                 'depth'           => 0,
                                 'walker'          => '',
                             ] );?>
-                                <!-- <nav class="main-nav">
-                                    <ul>
-                                        <li class="dropdown-holder active">
-                                            <a href="index.html">Главная</a>
-                                            
-                                        </li>
-                                        <li class="megamenu-holder ">
-                                            <a href="shop-left-sidebar.html">Каталог 
-                                           
-                                            </a>
-                                            
-                                        </li>
-                                        <li>
-                                        <a href="javascript:void(0)">О нас</a>
-                                        </li>
-                                        <li class="">
-                                            <a href="javascript:void(0)">Доставка и оплата
-                                           
-                                            </a>
-                                           
-                                        </li>
-                                        <li class="">
-                                            <a href="contact.html">Контакты</a>
-                                        </li>
-                                       
-                                    </ul>
-                                </nav> -->
+                               
                             </div>
                         </div>
                         
                         <div class="custom-setting_col custom-setting_col_top_socials col-12 d-none d-lg-block">
                             <div class="ht-right_area">
                                 <div class="ht-menu">
-                                    <a href="my-account.html"><i class="fab fa-vk"></i></a>
+                                    <a href="<?php echo trim(get_option('slk_vk'));?>" target="_blank"><i class="fab fa-vk"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -189,29 +170,7 @@
                                     'depth'           => 0,
                                     'walker'          => '',
                                 ] );?>
-                                <!-- <nav class="main-nav">
-                                    <ul>
-                                        <li class="dropdown-holder active"><a href="index.html">Главная</a>
-                                            
-                                        </li>
-                                        <li class="megamenu-holder ">
-                                            <a href="shop-left-sidebar.html">Каталог
-                                                
-                                            </a>
-                                            
-                                        </li>
-                                        <li>
-                                        <a href="javascript:void(0)">О нас</a></li>
-                                        <li class="">
-                                        <a href="javascript:void(0)">Доставка и оплата 
-                                           
-                                            </a>
-                                           
-                                        </li>
-                                        <li class=""><a href="contact.html">Контакты</a></li>
-                                       
-                                    </ul>
-                                </nav> -->
+                                
                             </div>
                         </div>
                         <div class="col-sm-3 d-block d-lg-none">
@@ -231,10 +190,14 @@
                                     </li>
                                 
                                     <li class="contact-us_wrap phone_wrap">
-                                        <a href="tel://+123123321345"><i class="ion-android-call"></i>+123 321 345</a>
+                                        <a href="tel:<?php echo trim(get_option('slk_phone'));?>"><i class="ion-android-call"></i>
+                                            <?php echo trim(get_option('slk_phone'));?>
+                                        </a>
                                     </li>
                                     <li class="contact-us_wrap">
-                                        <a href="mailto:slk-avto@yandex.ru"><i class="ion-android-call"></i>slk-avto@yandex.ru</a>
+                                        <a href="mailto:<?php echo trim(get_option('slk_email'));?>"><i class="ion-android-call"></i>
+                                            <?php echo trim(get_option('slk_email'));?>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
@@ -243,61 +206,7 @@
                 </div>
             </div>
             
-            <!-- <div class="offcanvas-minicart_wrapper" id="miniCart">
-                <div class="offcanvas-menu-inner">
-                    <a href="#" class="btn-close"><i class="ion-android-close"></i></a>
-                    <div class="minicart-content">
-                        <div class="minicart-heading">
-                            <h4>Shopping Cart</h4>
-                        </div>
-                        <ul class="minicart-list">
-                            <li class="minicart-product">
-                                <a class="product-item_remove" href="javascript:void(0)"><i
-                                    class="ion-android-close"></i></a>
-                                <div class="product-item_img">
-                                    <img src="<?php echo get_template_directory_uri() . '/assets/assets/images/product/small-size/1.jpg';?>" alt="Uren's Product Image">
-                                </div>
-                                <div class="product-item_content">
-                                    <a class="product-item_title" href="shop-left-sidebar.html">Autem ipsa ad</a>
-                                    <span class="product-item_quantity">1 x $145.80</span>
-                                </div>
-                            </li>
-                            <li class="minicart-product">
-                                <a class="product-item_remove" href="javascript:void(0)"><i
-                                    class="ion-android-close"></i></a>
-                                <div class="product-item_img">
-                                    <img src="<?php echo get_template_directory_uri() . '/assets/assets/images/product/small-size/2.jpg';?>" alt="Uren's Product Image">
-                                </div>
-                                <div class="product-item_content">
-                                    <a class="product-item_title" href="shop-left-sidebar.html">Tenetur illum amet</a>
-                                    <span class="product-item_quantity">1 x $150.80</span>
-                                </div>
-                            </li>
-                            <li class="minicart-product">
-                                <a class="product-item_remove" href="javascript:void(0)"><i
-                                    class="ion-android-close"></i></a>
-                                <div class="product-item_img">
-                                    <img src="<?php echo get_template_directory_uri() . '/assets/assets/images/product/small-size/3.jpg';?>" alt="Uren's Product Image">
-                                </div>
-                                <div class="product-item_content">
-                                    <a class="product-item_title" href="shop-left-sidebar.html">Non doloremque placeat</a>
-                                    <span class="product-item_quantity">1 x $165.80</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="minicart-item_total">
-                        <span>Subtotal</span>
-                        <span class="ammount">$462.4‬0</span>
-                    </div>
-                    <div class="minicart-btn_area">
-                        <a href="cart.html" class="uren-btn uren-btn_dark uren-btn_fullwidth">Minicart</a>
-                    </div>
-                    <div class="minicart-btn_area">
-                        <a href="checkout.html" class="uren-btn uren-btn_dark uren-btn_fullwidth">Checkout</a>
-                    </div>
-                </div>
-            </div> -->
+            
 
             <div class="mobile-menu_wrapper" id="mobileMenu">
                 <div class="offcanvas-menu-inner">

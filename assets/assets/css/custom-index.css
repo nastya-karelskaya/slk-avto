@@ -153,10 +153,24 @@
 }
 
 .cars-grid-area .cars-grid-nav .cars-grid, .cars-grid-area .cars-grid-nav .cars-grid:last-child {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 16%;
-  flex: 0 0 16%;
-  max-width: 16%;
+  -webkit-box-flex: unset;
+      -ms-flex: unset;
+          flex: unset;
+  max-width: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0px 20px 0px 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .cars-grid-area .cars-grid .cars-grid__item, .cars-grid-area .cars-grid:last-child .cars-grid__item, .uren-shipping_area .shipping-nav [class*="shipping-grid"]:last-child .shipping-item {
@@ -165,6 +179,7 @@
           justify-content: flex-start;
   text-align: left;
   margin-bottom: 25px;
+  width: 16.5%;
 }
 
 .cars-grid-area .cars-grid .cars-grid__item .shipping-icon {

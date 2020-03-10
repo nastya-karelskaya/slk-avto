@@ -152,7 +152,7 @@ get_header('common');
 
 
                             <div class="contact-form">
-                                <form id="contact-form" action="http://hasthemes.com/file/mail.php" method="post">
+                                <!-- <form id="contact-form" action="http://hasthemes.com/file/mail.php" method="post">
                                     <div class="form-group__wrapper">
                                         <div class="form-group">
                                             <label>Ваше имя: <span class="required">*</span></label>
@@ -179,7 +179,8 @@ get_header('common');
                                         <button type="submit" value="submit" id="submit" class="uren-contact-form_btn"
                                             name="submit">Отправить</button>
                                     </div>
-                                </form>
+                                </form> -->
+                                <?php echo do_shortcode('[contact-form-7 id="133" title="Контактная форма на странице Доставка и Оплата"]') ?>
                             </div>
                             <p class="form-messege"></p>
                         </div>

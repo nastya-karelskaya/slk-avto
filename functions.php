@@ -189,7 +189,141 @@ function register_my_widgets(){
 
 
 
+/****************** header widgets */
+function register_slk_header_widgets(){
+	register_sidebar( array(
+		'name' => 'Информация в заголовке сайта',
+		'id' => 'header-info',
+		'description' => 'Выводиться в "шапке" сайта.',
+		'before_widget' => '<li class="header-info-widget-block">',
+		'after_widget' => '</li>',
+		'before_title' => '<h2 class="widgettitle">',
+		'after_title' => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'register_slk_header_widgets' );
 
+
+////****** Add fields in settings  */
+
+function add_email_field_to_general_admin_page(){
+	$option_name = 'slk_email';
+
+	// регистрируем опцию
+	register_setting( 'general', $option_name );
+
+	// добавляем поле
+	add_settings_field( 
+		'myprefix_email_setting-id', 
+		'E-mail', 
+		'myprefix_email_setting_callback_function', 
+		'general', 
+		'default', 
+		array( 
+			'id' => 'myprefix_email_setting-id', 
+			'option_name' => 'slk_email' 
+		)
+	);
+}
+
+
+function myprefix_email_setting_callback_function( $val ){
+	$id = $val['id'];
+	$option_name = $val['option_name'];
+	?>
+	<input 
+		type="text" 
+		name="<? echo $option_name ?>" 
+		id="<? echo $id ?>" 
+		value="<? echo esc_attr( get_option($option_name) ) ?>" 
+	/> 
+	<?
+}
+
+function add_phone_field_to_general_admin_page(){
+	$option_name = 'slk_phone';
+
+	// регистрируем опцию
+	register_setting( 'general', $option_name );
+
+	// добавляем поле
+	add_settings_field( 
+		'myprefix_phone_setting-id', 
+		'Телефон', 
+		'myprefix_phone_setting_callback_function', 
+		'general', 
+		'default', 
+		array( 
+			'id' => 'myprefix_phone_setting-id', 
+			'option_name' => 'slk_phone' 
+		)
+	);
+}
+
+
+function myprefix_phone_setting_callback_function( $val ){
+	$id = $val['id'];
+	$option_name = $val['option_name'];
+	?>
+	<input 
+		type="text" 
+		name="<? echo $option_name ?>" 
+		id="<? echo $id ?>" 
+		value="<? echo esc_attr( get_option($option_name) ) ?>" 
+	/> 
+	<?
+}
+
+function add_vk_field_to_general_admin_page(){
+	$option_name = 'slk_vk';
+
+	// регистрируем опцию
+	register_setting( 'general', $option_name );
+
+	// добавляем поле
+	add_settings_field( 
+		'myprefix_vk_setting-id', 
+		'Группа в ВК', 
+		'myprefix_vk_setting_callback_function', 
+		'general', 
+		'default', 
+		array( 
+			'id' => 'myprefix_vk_setting-id', 
+			'option_name' => 'slk_vk' 
+		)
+	);
+}
+
+
+function myprefix_vk_setting_callback_function( $val ){
+	$id = $val['id'];
+	$option_name = $val['option_name'];
+	?>
+	<input 
+		type="text" 
+		name="<? echo $option_name ?>" 
+		id="<? echo $id ?>" 
+		value="<? echo esc_attr( get_option($option_name) ) ?>" 
+	/> 
+	<?
+}
+
+
+add_action('admin_menu', 'add_email_field_to_general_admin_page');
+add_action('admin_menu', 'add_phone_field_to_general_admin_page');
+add_action('admin_menu', 'add_vk_field_to_general_admin_page');
+
+
+
+/***** CUSTOM LOGO  */
+
+add_theme_support( 'custom-logo', [
+	'height'      => 190,
+	'width'       => 190,
+	'flex-width'  => false,
+	'flex-height' => false,
+	'header-text' => '',
+] );
 
 
 
@@ -739,5 +873,11 @@ function register_my_widgets(){
 // 	} );
 // }
 
+
+
+
+/************* Remove <BR>s in Contact Form 7 *******/
+// Contact Form 7 remove auto added p tags
+add_filter('wpcf7_autop_or_not', '__return_false');
 
 ?>

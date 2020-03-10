@@ -20,31 +20,20 @@ get_header();
                 <div class="row">
                     <div class="col-xl-12 col-lg-8">
                         <div class="main-slider slider-navigation_style-2 main-screen">
-                            <div class="single-slide bg-3">
+                            <div class="single-slide bg-3" style="background-color:#f7f7f7;background-image: url(<?php echo get_field('main_button_img'); ?>); background-repeat: no-repeat; background-position: center center; background-size: cover;">
                                 <div class="slider-content">
                                     <!-- <span>New thinking new possibilities</span> -->
-                                    <h1>Продажа б\у запчастей для иномарок</h1>
-                                    <!-- <h4>Starting at <span>$99.00</span></h4> -->
+                                    <h1><?php echo get_field('main_title'); ?></h1>
+                                    
                                     <div class="uren-btn-ps_left slide-btn main-screen__btn">
-                                        <a class="uren-btn" href="shop-left-sidebar.html">Посмотреть каталог</a>
+                                        <a class="uren-btn" href="<?php echo get_field('main_button_link'); ?>" target="_blank"><?php echo get_field('main_button_text'); ?></a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         
                     </div>
-                    <!-- <div class="col-xl-4 col-lg-4">
-                        <div class="row banner-wrap">
-                            <div class="col-lg-12 col-md-6">
-                                <div class="slider-banner banner-item img-hover_effect">
-                                    <a href="shop-left-sidebar.html">
-                                        <img class="img-full" src="assets/images/banner/2-1.jpg" alt="Uren's Banner">
-                                    </a>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div> -->
+                    
                 </div>
             </div>
         </div>
@@ -59,638 +48,74 @@ get_header();
                 <div class="shipping-nav cars-grid-nav">
                     <div class="row no-gutters">
                         <div class="shipping-grid cars-grid">
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Acura</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Alfa Romeo</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Aston Martin</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Audi</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Bentley</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>BMW</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Brilliance</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>BYD</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Cadillac</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Chery</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Chevrolet</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Chrysler</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Citroen</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="shipping-grid cars-grid">
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Daewoo</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Daihatsu</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Datsun</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Dodge</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Dongfeng</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>FAW</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Fiat</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Ford</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Ford America</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>GAZ</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Geely</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Genesis</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>GM</h6>
-                                </div>
-                            </div>     
-                        </div>
-                        <div class="shipping-grid cars-grid">
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Great Wall</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Hafei</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Hava</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Honda</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Hummer</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Hyundai</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Infiniti</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Iran Khodro</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Isuzu</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Iveco</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Jaguar</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Jeep</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Kia</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="shipping-grid cars-grid">
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Lamborghini</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Lancia </h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Land Rover</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>LDV</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Lexus</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Lifan</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>LuxGen</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Maserati</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Maybach</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Mazda</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Mercedes Benz</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Mini</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Mitsubishi</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="shipping-grid cars-grid">
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Nissan</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Opel</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Peugeot</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Porsche</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Ravon</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Renault</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Rolls-Royce</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Rover</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>SAAB</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Scion</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Seat</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Skoda</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Smart</h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="shipping-grid cars-grid">
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Ssang Yong</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Subaru</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Suzuki</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>TAGAZ</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Tesla</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Toyota</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>UAZ</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>VAZ</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Volvo</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>VW</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>ZAZ</h6>
-                                </div>
-                            </div>
-                            <div class="shipping-item cars-grid__item">
-                                <div class="shipping-icon">
-                                    <i class="fas fa-cog"></i>
-                                </div>
-                                <div class="shipping-content">
-                                    <h6>Zotye</h6>
-                                </div>
-                            </div>
-                        </div>    
+
+                        <?php 
+                            $categories = get_categories( [
+                                'taxonomy'     => 'category',
+                                'type'         => 'post',
+                                'child_of'     => 34,
+                                'parent'       => '',
+                                'orderby'      => 'name',
+                                'order'        => 'ASC',
+                                'hide_empty'   => 0,
+                                'hierarchical' => 0,
+                                'exclude'      => '',
+                                'include'      => '',
+                                'number'       => 0,
+                                'pad_counts'   => false,
+                                // полный список параметров смотрите в описании функции http://wp-kama.ru/function/get_terms
+                            ] );
+
+                            if( $categories ) {
+                                foreach( $categories as $cat ) {
+
+                        ?>
+
+                            <div class="shipping-item cars-grid__item">
+                                <div class="shipping-icon">
+                                    <i class="fas fa-cog"></i>
+                                </div>
+                                <div class="shipping-content">
+                                    <a href="<?php echo '/' . $cat->slug; ?>">
+                                        <h6><?php echo $cat->name; ?></h6>
+                                    </a>
+                                </div>
+                            </div>
+
+                        <?php 
+
+                    
+                                    // Данные в объекте $cat
+
+                                    // $cat->term_id
+                                    // $cat->name (Рубрика 1)
+                                    // $cat->slug (rubrika-1)
+                                    // $cat->term_group (0)
+                                    // $cat->term_taxonomy_id (4)
+                                    // $cat->taxonomy (category)
+                                    // $cat->description (Текст описания)
+                                    // $cat->parent (0)
+                                    // $cat->count (14)
+                                    // $cat->object_id (2743)
+                                    // $cat->cat_ID (4)
+                                    // $cat->category_count (14)
+                                    // $cat->category_description (Текст описания)
+                                    // $cat->cat_name (Рубрика 1)
+                                    // $cat->category_nicename (rubrika-1)
+                                    // $cat->category_parent (0)
+
+                                }
+                            }
+
+                        ?>
+
+
+                           
                     </div>
                 </div>
                 <div class="shipping-text cars-grid-text">
-                    <p>Доставка: самовывоз или транспортной компанией. </p>
-                    <p><a href="" class="uren-btn">Подробнее</a></p>
+                    <p><?php echo get_field('catalog_descr'); ?></p>
+                    <p><a href="<?php echo get_field('catalog_button_link'); ?>" class="uren-btn"><?php echo get_field('catalog_button_text'); ?></a></p>
                 </div>
             </div>
         </div>
@@ -714,60 +139,89 @@ get_header();
                                              {"breakpoint":481, "settings": {"slidesToShow": 1}},
                                              {"breakpoint":321, "settings": {"slidesToShow": 1}}
                                          ]'>
+
+                        <?php 
+                            $reviews = get_field('reviews');
+
+                            if($reviews) {
+                                foreach($reviews as $review) {
+
+                        ?>
                             <div class="slide-item">
                                 <div class="slide-inner">
                                     <div class="single-slide">
                                         <div class="slide-content">
-                                            <span class="primary-text_color"><a class="link" href="">Ссылка на отзыв</a></span>
-                                            <h3 class="user-name">Иван Иванов</h3>
-                                            <div class="comment-box">
-                                                <p class="user-feedback">“ Отзыв Ивана Иванова. ”</p>
-                                            </div>
+
+                        <?php 
+                                foreach($review as $key => $value) {
+                                    if( ($key == 'review_link') && ($review[$key] != '') ) {
+                                        
+                                            
+                                    
+                        ?>
+                            
+                                        <span class="primary-text_color"><a class="link" href=""><?php echo $review[$key];?></a></span>
+                                            
+
+
+                        <?php 
+                                    }
+
+                                    if( ($key == 'review_title') && ($review[$key] != '') ) {
+                                    
+                        ?>
+                                        <h3 class="user-name"><?php echo $review[$key];?></h3>
+
+                        <?php 
+                                    
+                                   }
+
+                                    if( ($key == 'review_text') && ($review[$key] != '') ) {
+                                        
+                                   
+
+                        ?>
+
+                                        <div class="comment-box">
+                                            <p class="user-feedback">“ <?php echo $review[$key];?> ”</p>
                                         </div>
-                                        <div class="slide-image">
-                                            <a href="javascript:void(0)">
-                                                <img src="<?php echo get_template_directory_uri() . '/assets/assets/images/testimonial/user/1.png';?>" alt="Uren's Testimonial Image">
-                                            </a>
+
+
+                        <?php 
+                                                  
+                                    }
+
+                                    if( ($key == 'review_img') && ($review[$key] != '') ) {
+
+                        ?>
+
+                                            <div class="slide-image">
+                                                <a href="javascript:void(0)">
+                                                    <img src="<?php echo $review[$key];?>" alt="<?php echo $review['review_title']; ?>">
+                                                </a>
+                                            </div>
+
+                        <?php
+                                           
+   
+                                    }
+                                }
+
+                        ?>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="slide-item">
-                                <div class="slide-inner">
-                                    <div class="single-slide">
-                                        <div class="slide-content">
-                                            <span class="primary-text_color"><a class="link" href="">Ссылка на отзыв</a></span>
-                                            <h3 class="user-name">Петр Петров</h3>
-                                            <div class="comment-box">
-                                                <p class="user-feedback">“ Отзыв Петра Петрова. ”</p>
-                                            </div>
-                                        </div>
-                                        <div class="slide-image">
-                                            <a href="javascript:void(0)">
-                                                <img src="<?php echo get_template_directory_uri() . '/assets/assets/images/testimonial/user/2.png';?>" alt="Uren's Testimonial Image">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="slide-item">
-                                <div class="slide-inner">
-                                    <div class="single-slide">
-                                        <div class="slide-content">
-                                            <span class="primary-text_color"><a class="link" href="">Ссылка на отзыв</a></span>
-                                            <h3 class="user-name">Ольга Ольгина</h3>
-                                            <div class="comment-box">
-                                                <p class="user-feedback">“ Отзыв Ольги Ольгиной. ”</p>
-                                            </div>
-                                        </div>
-                                        <div class="slide-image">
-                                            <a href="javascript:void(0)">
-                                                <img src="<?php echo get_template_directory_uri() . '/assets/assets/images/testimonial/user/3.png';?>" alt="Uren's Testimonial Image">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
+
+                        <?php
+                            }
+                        }
+
+                        ?>
+
+                          
+                            
                         </div>
                     </div>
                 </div>
@@ -784,15 +238,66 @@ get_header();
                     <div class="col-lg-5  col-md-12">
                         <div class="contact-page-side-content">
                             <h3 class="contact-page-title">Как сделать заказ?</h3>
-                            <p class="contact-page-message">Для заказа или уточнения наличия запчастей вы можете связаться с нами любым удобным способом:
-                            </p>
+                            
+                                <?php 
+                                    $contacts_title = get_field('contacts_title'); 
+                                    if($contacts_title) {
+                                ?>
+
+                                <p class="contact-page-message">
+
+                                <?php
+                                        echo $contacts_title;
+                                    
+                                ?>
+
+                                </p>
+
+                                <?php
+                                        
+                                    }
+                                    
+                                ?>
                             <div class="single-contact-block">
                                 <h4><i class="ion-android-call"></i>Позвонить по телефону</h4>
-                                <a href="tel:89114169740"> +79114169740</a>
+                                <?php 
+                                    $contacts_phone = get_field('contacts_phone'); 
+                                    if($contacts_phone) {
+                                ?>
+
+                                <a href="tel:<?php echo $contacts_phone;?>"> 
+
+                                <?php
+                                        echo $contacts_phone;
+                                    
+                                ?>
+
+                                </a>
+
+                                <?php
+                                        
+                                    }
+                                    
+                                ?>
+                                
                             </div>
                             <div class="single-contact-block">
                                 <h4><i class="fab fa-vk"></i>Оставить сообщение в группе в</h4>
-                                <a href="https://vk.com/slkavto" target="_blank">ВКонтакте</a>
+
+                                <?php 
+                                    $contacts_vk = get_field('contacts_vk'); 
+                                    if($contacts_vk) {
+                                ?>
+
+                                <a href="<?php echo $contacts_vk;?>" target="_blank">ВКонтакте</a>
+
+                                <?php
+                                        
+                                    }
+                                    
+                                ?>
+
+                                
                             </div>
                             <div class="single-contact-block last-child">
                                 <h4><i class="fas fa-envelope"></i>Заполнить форму справа.</h4>
@@ -804,7 +309,7 @@ get_header();
                         <div class="contact-form-content">
                             <!-- <h3 class="contact-page-title">Tell Us Your Message</h3> -->
                             <div class="contact-form">
-                                <form id="contact-form" action="http://hasthemes.com/file/mail.php" method="post">
+                                <!-- <form id="contact-form" action="http://hasthemes.com/file/mail.php" method="post">
                                     <div class="form-group">
                                         <label>Ваше имя: <span class="required">*</span></label>
                                         <input type="text" name="con_name" id="con_name" required>
@@ -813,10 +318,7 @@ get_header();
                                         <label>Ваш телефон: <span class="required">*</span></label>
                                         <input type="email" name="con_email" id="con_email" required>
                                     </div>
-                                    <!-- <div class="form-group">
-                                        <label>Subject</label>
-                                        <input type="text" name="con_subject" id="con_subject">
-                                    </div> -->
+                                   
                                     <div class="form-group form-group-2">
                                         <label>Сообщение:</label>
                                         <textarea name="con_message" id="con_message"></textarea>
@@ -824,7 +326,8 @@ get_header();
                                     <div class="form-group">
                                         <button type="submit" value="submit" id="submit" class="uren-contact-form_btn" name="submit">Отправить</button>
                                     </div>
-                                </form>
+                                </form> -->
+                                <?php echo do_shortcode('[contact-form-7 id="131" title="Без названия"]'); ?>
                             </div>
                             <p class="form-messege"></p>
                         </div>
