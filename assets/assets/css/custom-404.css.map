@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,wBAAwB,CAAC;EAEvB,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,mBAAmB;CAC5B",
+    "sources": [
+        "custom-404.scss"
+    ],
+    "names": [],
+    "file": "custom-404.css"
+}

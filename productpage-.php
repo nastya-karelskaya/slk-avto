@@ -1,6 +1,7 @@
 <?php
 /*
-Template Name: Вид товара (главная категория)
+Template Name: Запчасть (запас 2)
+
 */
 ?>
 
@@ -8,7 +9,7 @@ Template Name: Вид товара (главная категория)
 
 
 <?php 
-get_header('common');
+get_header();
 ?>
 
     <!-- Begin Uren's Breadcrumb Area -->
@@ -19,30 +20,31 @@ get_header('common');
                 <ul>
                     <li><a href="<?php echo get_site_url();?>">Главная</a></li>
                     <?php 
-                        $catalog_page = get_page_by_title('Каталог');
+                       // $catalog_page = get_page_by_title('Каталог');
 
-                        if($catalog_page) {
+                       // if($catalog_page) {
                     ?>
-                    <li><a href="<?php echo get_site_url() . '/' . $catalog_page['post_name'];?>">Каталог</a></li>
+                    <li><a href="<?php //echo get_site_url() . '/' . $catalog_page['post_name'];?>">Каталог</a></li>
 
                     <?php 
-                        $posttags = get_the_tags();
-                        if ( $posttags ) {
+                    //    $posttags = get_the_tags();
+                      //  if ( $posttags ) {
                             
                        
                     ?>
 
 
-                    <li class="active"><?php echo $posttags[0]->name . ' '; ?></li>
-                    
+                    <li class="active"><?php //echo $posttags[0]->name . ' '; ?></li>
 
                     <?php 
-                         }
+                        // }
                     ?>
-                    <li class="active"><?php the_title();?></li>
+
+                    <li class="active"><?php //the_title();?></li>
                     <?php 
-                        }
+                      //  }
                     ?>
+                    
                 </ul>
             </div>
         </div>

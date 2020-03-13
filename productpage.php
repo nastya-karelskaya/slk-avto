@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Запчасть
+Template Name: Запчасть (запас)
 
 */
 ?>
@@ -9,19 +9,41 @@ Template Name: Запчасть
 
 
 <?php 
-get_header('common');
+get_header();
 ?>
 
     <!-- Begin Uren's Breadcrumb Area -->
     <div class="breadcrumb-area">
         <div class="container">
             <div class="breadcrumb-content">
-                <h1>Вид товара</h1>
+                <h1><?php the_title();?></h1>
                 <ul>
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="index.html">Каталог</a></li>
-                    <li class="active">Категория каталога</li>
-                    <li class="active">Вид товара</li>
+                    <li><a href="<?php echo get_site_url();?>">Главная</a></li>
+                    <?php 
+                       // $catalog_page = get_page_by_title('Каталог');
+
+                       // if($catalog_page) {
+                    ?>
+                    <li><a href="<?php //echo get_site_url() . '/' . $catalog_page['post_name'];?>">Каталог</a></li>
+
+                    <?php 
+                    //    $posttags = get_the_tags();
+                      //  if ( $posttags ) {
+                            
+                       
+                    ?>
+
+
+                    <li class="active"><?php //echo $posttags[0]->name . ' '; ?></li>
+
+                    <?php 
+                        // }
+                    ?>
+
+                    <li class="active"><?php //the_title();?></li>
+                    <?php 
+                      //  }
+                    ?>
                     
                 </ul>
             </div>

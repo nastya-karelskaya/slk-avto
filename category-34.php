@@ -9,11 +9,19 @@ get_header('common');
     <div class="breadcrumb-area">
         <div class="container">
             <div class="breadcrumb-content">
-                <h1>Категория каталога</h1>
+                <h1><?php the_title();?></h1>
                 <ul>
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="index.html">Каталог</a></li>
-                    <li class="active">Категория каталога</li>
+                    <li><a href="<?php echo get_site_url();?>">Главная</a></li>
+                    <?php 
+                        $catalog_page = get_page_by_title('Каталог');
+
+                        if($catalog_page) {
+                    ?>
+                    <li><a href="<?php echo get_site_url() . '/' . $catalog_page['post_name'];?>">Каталог</a></li>
+                    <li class="active"><?php the_title();?></li>
+                    <?php 
+                        }
+                    ?>
                 </ul>
             </div>
         </div>

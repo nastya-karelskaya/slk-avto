@@ -54,7 +54,7 @@ get_header();
                                 'taxonomy'     => 'category',
                                 'type'         => 'post',
                                 'child_of'     => 34,
-                                'parent'       => '',
+                                'parent'       => 34,
                                 'orderby'      => 'name',
                                 'order'        => 'ASC',
                                 'hide_empty'   => 0,

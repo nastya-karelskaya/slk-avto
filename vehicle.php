@@ -1,6 +1,7 @@
 <?php
 /*
-Template Name: Singular
+Template Name: Запчасть
+Template Post Type: post, product
 
 */
 ?>
@@ -9,20 +10,31 @@ Template Name: Singular
 
 
 <?php 
-get_header('common');
+get_header();
 ?>
 
     <!-- Begin Uren's Breadcrumb Area -->
-    <div class="breadcrumb-area">
+    <div class="breadcrumb-area" style="background: url(<?php echo get_field('product-page_title-photo');?>) center no-repeat cover;">
         <div class="container">
             <div class="breadcrumb-content">
-                <h1>Запчасть</h1>
+                <h1><?php the_title();?></h1>
                 <ul>
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="index.html">Каталог</a></li>
+                    <li><a href="<?php echo get_site_url();?>">Главная</a></li>
+
+                    <?php 
+                       // $catalog_page = get_page_by_title('Каталог');
+
+                       // if($catalog_page) {
+                    ?>
+                    <li><a href="<?php //echo get_site_url() . '/' . $catalog_page['post_name'];?>">Каталог</a></li>
+                 
                     <li class="active">Категория каталога</li>
                     <li class="active">Вид товара</li>
-                    <li class="active">Запчасть</li>
+                    <li class="active"><?php the_title();?></li>
+                    <?php 
+                        //}
+                    ?>
+               
                 </ul>
             </div>
         </div>
@@ -80,9 +92,12 @@ get_header('common');
                     <div class="col-lg-9 col-md-7 order-1 order-lg-2 order-md-2">
                       
                         <!-- Begin Uren's Tab Style Right Area -->
-                        <div class="sp-area sp-tab-style_left sp-tab-style_right">
+                        <!-- <div class="sp-area sp-tab-style_left sp-tab-style_right"> -->
+                        <div class=" sp-tab-style_left sp-tab-style_right">
                             <div class="container-fluid">
-                                <div class="sp-nav">
+                                
+                                <!-- <div class="sp-nav"> -->
+                                <div class="">
                                     <div class="row">
                                         <div class="col-lg-5">
                                             <div class="sp-img_area">
@@ -94,24 +109,34 @@ get_header('common');
                                                                                     "swipe": false,
                                                                                     "asNavFor": ".sp-img_slider-nav"
                                                                                     }'>
+
+                                                    <?php 
+                                                        $product_page_product_imgs = get_field('product_page_product_imgs');
+                                                        //foreach($product_page_product_imgs as $key => $value) {
+                                                            if($product_page_product_imgs) {
+
+
+                                                    ?>
+
                                                     <div class="single-slide red zoom">
-                                                        <img src="<?php echo get_template_directory_uri() . '/assets/assets/images/product/large-size/1.jpg';?>" alt="Uren's Product Image">
+                                                        <img src="<?php echo $product_page_product_imgs['product_page_product_img_1'];?>" alt="Uren's Product Image">
                                                     </div>
                                                     <div class="single-slide orange zoom">
-                                                        <img src="<?php echo get_template_directory_uri() . '/assets/assets/images/product/large-size/2.jpg';?>" alt="Uren's Product Image">
+                                                        <img src="<?php echo $product_page_product_imgs['product_page_product_img_2'];?>" alt="Uren's Product Image">
                                                     </div>
                                                     <div class="single-slide brown zoom">
-                                                        <img src="<?php echo get_template_directory_uri() . '/assets/assets/images/product/large-size/3.jpg';?>" alt="Uren's Product Image">
+                                                        <img src="<?php echo $product_page_product_imgs['product_page_product_img_3'];?>" alt="Uren's Product Image">
                                                     </div>
                                                     <div class="single-slide umber zoom">
-                                                        <img src="<?php echo get_template_directory_uri() . '/assets/assets/images/product/large-size/4.jpg';?>" alt="Uren's Product Image">
+                                                        <img src="<?php echo $product_page_product_imgs['product_page_product_img_4'];?>" alt="Uren's Product Image">
                                                     </div>
                                                     <div class="single-slide black zoom">
-                                                        <img src="<?php echo get_template_directory_uri() . '/assets/assets/images/product/large-size/5.jpg';?>" alt="Uren's Product Image">
+                                                        <img src="<?php echo $product_page_product_imgs['product_page_product_img_5'];?>" alt="Uren's Product Image">
                                                     </div>
                                                     <div class="single-slide green zoom">
-                                                        <img src="<?php echo get_template_directory_uri() . '/assets/assets/images/product/large-size/6.jpg';?>" alt="Uren's Product Image">
+                                                        <img src="<?php echo $product_page_product_imgs['product_page_product_img_6'];?>" alt="Uren's Product Image">
                                                     </div>
+                                                    
                                                 </div>
                                                 <div class="sp-img_slider-nav slick-slider-nav uren-slick-slider slider-navigation_style-4" data-slick-options='{
                                                                                     "slidesToShow": 3,
@@ -121,56 +146,92 @@ get_header('common');
                                                                                     "vertical" : true
                                                                                     }'>
                                                     <div class="single-slide red">
-                                                        <img src="<?php echo get_template_directory_uri() . '/assets/assets/images/product/small-size/1.jpg';?>" alt="Uren's Product Thumnail">
+                                                        <img src="<?php echo $product_page_product_imgs['product_page_product_img_1'];?>" alt="Uren's Product Thumnail">
                                                     </div>
                                                     <div class="single-slide orange">
-                                                        <img src="<?php echo get_template_directory_uri() . '/assets/assets/images/product/small-size/2.jpg';?>" alt="Uren's Product Thumnail">
+                                                        <img src="<?php echo $product_page_product_imgs['product_page_product_img_2'];?>" alt="Uren's Product Thumnail">
                                                     </div>
                                                     <div class="single-slide brown">
-                                                        <img src="<?php echo get_template_directory_uri() . '/assets/assets/images/product/small-size/3.jpg';?>" alt="Uren's Product Thumnail">
+                                                        <img src="<?php echo $product_page_product_imgs['product_page_product_img_3'];?>" alt="Uren's Product Thumnail">
                                                     </div>
                                                     <div class="single-slide umber">
-                                                        <img src="<?php echo get_template_directory_uri() . '/assets/assets/images/product/small-size/4.jpg';?>" alt="Uren's Product Thumnail">
+                                                        <img src="<?php echo $product_page_product_imgs['product_page_product_img_4'];?>" alt="Uren's Product Thumnail">
                                                     </div>
                                                     <div class="single-slide red">
-                                                        <img src="<?php echo get_template_directory_uri() . '/assets/assets/images/product/small-size/5.jpg';?>" alt="Uren's Product Thumnail">
+                                                        <img src="<?php echo $product_page_product_imgs['product_page_product_img_5'];?>" alt="Uren's Product Thumnail">
                                                     </div>
                                                     <div class="single-slide orange">
-                                                        <img src="<?php echo get_template_directory_uri() . '/assets/assets/images/product/small-size/6.jpg';?>" alt="Uren's Product Thumnail">
+                                                        <img src="<?php echo $product_page_product_imgs['product_page_product_img_6'];?>" alt="Uren's Product Thumnail">
                                                     </div>
+
+                                                    <?php 
+                                                        }
+                                                    ?>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-7">
                                             <div class="sp-content">
                                                 <div class="sp-heading">
-                                                    <h5><a href="#">Название</a></h5>
+                                                    <h5><a href="#"><?php the_title(); ?></a></h5>
                                                 </div>
                                                 <div class="sp-heading">
-                                                    <h6>Цена: <span>55</span> </h6>
+                                                    <h6>Цена: <span><?php echo get_field('product_page_product_price'); ?></span> </h6>
                                                 </div>
                                                
                                                 <div class="sp-essential_stuff">
                                                     <h6>Характеристики:</h6>
+
                                                     <ul>
-                                                        <li>Сод детали: <a href="javascript:void(0)">...</a></li>
-                                                        <li>Состояние: <a href="javascript:void(0)">...</a></li>
-                                                        <li>Примечания: <a href="javascript:void(0)">...</a></li>
-                                                        <li>Номер: <a href="javascript:void(0)">...</a></li>
+                                                        <?php 
+                                                        $product_page_product_options = get_field('product_page_product_options');
+
+                                                        foreach($product_page_product_options as $product_page_product_option) {
+                                                            foreach($product_page_product_option as $key => $value) {
+
+                                                        ?>
+                                                        <div>
+                                                            <?php 
+                                                            //var_dump($product_page_product_option);
+                                                            
+                                                            ?>
+                                                        </div>
+                                                        <li>
+
+                                                            <?php 
+                                                                if( ($key == 'product_option_name') && ($product_page_product_option['product_option_name'] != '') ) {
+                                                                    echo $product_page_product_option['product_option_name'];
+        
+                                                            ?>: 
+                                                            <span>
+
+                                                            <?php 
+                                                                
+                                                                    echo $product_page_product_option['product_option_text'];
+                                                                }
+        
+                                                            ?>
+                                                        </li>
+                                                        <?php 
+                                                            }
+                                                        }
+                                                        ?>
+                                    
                                                        
                                                     </ul>
                                                 </div>
                                                
                                                 <div class="uren-tag-line">
                                                     <h6>Категории:</h6>
-                                                    <a href="javascript:void(0)">vehicle</a>,
+                                                    <?php the_category(); ?>
+                                                    <!-- <a href="javascript:void(0)">vehicle</a>,
                                                     <a href="javascript:void(0)">car</a>,
-                                                    <a href="javascript:void(0)">bike</a>
+                                                    <a href="javascript:void(0)">bike</a> -->
                                                 </div>
                                                 <div class="uren-social_link">
                                                     <ul>
                                                         <li class="facebook">
-                                                            <a href="https://www.vk.com" data-toggle="tooltip" target="_blank" title="ВКонтакте">
+                                                            <a href="<?php echo get_field('product_page_product_vk');?>" data-toggle="tooltip" target="_blank" title="ВКонтакте">
                                                                 <i class="fab fa-vk"></i>
                                                             </a>
                                                         </li>
@@ -199,11 +260,11 @@ get_header('common');
                                                         <p class="">Для заказа или уточнения наличия запчастей вы можете связаться с нами любым удобным способом:</p>
                                                         <div class="single-contact-block">
                                                             <h4><i class="ion-android-call"></i>Позвонить по телефону</h4>
-                                                            <a href="tel:89114169740"> +79114169740</a>
+                                                            <a href="tel:<?php echo trim(get_option('slk_phone'));?>"> <?php echo trim(get_option('slk_phone'));?></a>
                                                         </div>
                                                         <div class="single-contact-block">
                                                             <h4><i class="fab fa-vk"></i>Оставить сообщение в группе в</h4>
-                                                            <a href="https://vk.com/slkavto" target="_blank">ВКонтакте</a>
+                                                            <a href="<?php echo trim(get_option('slk_vk'));?>" target="_blank">ВКонтакте</a>
                                                         </div>
                                                         <div class="single-contact-block last-child">
                                                             <h4><i class="fas fa-envelope"></i>Заполнить форму ниже.</h4>

@@ -219,7 +219,26 @@
                             </form>
                         </div>
 
-                        <nav class="offcanvas-navigation">
+                        <?php wp_nav_menu( [
+                            'theme_location'  => 'mobile',
+                            'menu'            => '', 
+                            'container'       => 'nav', 
+                            'container_class' => 'offcanvas-navigation', 
+                            // 'container_id'    => '',
+                            'menu_class'      => 'mobile-menu', 
+                            'menu_id'         => '',
+                            'echo'            => true,
+                            'fallback_cb'     => 'wp_page_menu',
+                            'before'          => '',
+                            'after'           => '',
+                            'link_before'     => '',
+                            'link_after'      => '',
+                            'items_wrap'      => '<ul>%3$s</ul>',
+                            'depth'           => 0,
+                            'walker'          => '',
+                        ] );?>
+
+                        <!-- <nav class="offcanvas-navigation">
                             <ul class="mobile-menu">
                                 <li class="menu-item-has-children active">
                                 <a href="index.html">
@@ -253,7 +272,7 @@
                                    
                                 </li>
                             </ul>
-                        </nav>
+                        </nav> -->
 
                         
                     </div>

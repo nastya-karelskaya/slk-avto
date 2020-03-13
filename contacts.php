@@ -8,17 +8,17 @@ Template Name: Контакты
 
 
 <?php 
-get_header('common');
+get_header();
 ?>
 
     <!-- Begin Uren's Breadcrumb Area -->
     <div class="breadcrumb-area">
         <div class="container">
             <div class="breadcrumb-content">
-                <h1>Контакты</h1>
+                <h1><?php the_title();?></h1>
                 <ul>
-                    <li><a href="index.html">Главная</a></li>
-                    <li class="active">Контакты</li>
+                    <li><a href="<?php echo get_site_url();?>">Главная</a></li>
+                    <li class="active"><?php the_title();?></li>
                 </ul>
             </div>
         </div>
@@ -36,25 +36,25 @@ get_header('common');
                         <div class="contact-page-side-content">
                             <div class="single-contact-block">
                                 
-                                <a href="tel:89114169740"><i class="fa fa-phone"></i> +79114169740</a>
+                                <a href="tel:<?php echo trim(get_option('slk_phone'));?>"><i class="fa fa-phone"></i> <?php echo trim(get_option('slk_phone'));?></a>
                                 
                             </div>
                             <div class="single-contact-block">
                                 
-                                <a href="mailto:slk-avto@yandex.ru"> <i class="fa fa-envelope"></i> slk-avto@yandex.ru</a>
+                                <a href="mailto:<?php echo trim(get_option('slk_email'));?>"> <i class="fa fa-envelope"></i> <?php echo trim(get_option('slk_email'));?></a>
                            
                             </div>
 
                             <div class="single-contact-block">
                                 
-                                <a href="mailto:slk-avto@yandex.ru"> <i class="fab fa-vk"></i> Мы в "Вконтакте"</a>
+                                <a href="<?php echo trim(get_option('slk_vk'));?>"> <i class="fab fa-vk"></i> Мы в "Вконтакте"</a>
                             </div>
                             
                             
 
                             <div class="single-contact-block">
                                 
-                                <a href="#map"><i class="fa fa-map-marker"></i> пр.Лесной,51 стр.18, Петрозаводск</a>
+                                <a href="#map"><i class="fa fa-map-marker"></i> <?php echo trim(get_option('slk_address'));?></a>
                            
                             </div>
 
@@ -74,39 +74,14 @@ get_header('common');
                         <div class="contact-form-content">
                             <h2 class="contact-page-title">Напишите нам!</h2>
                             <div class="contact-page-subtitle">
-                                Заполните форму ниже, и наш менеджер свяжется с вами в ближайшее время!
+                                
+                                <?php echo get_field('contacts_page_form_title');?> 
                             </div>
 
                             
                             <div class="contact-form">
                                 <?php echo do_shortcode('[contact-form-7 id="132" title="Контактная форма на странице Контакты"]'); ?>
-                                <!-- <form id="contact-form" action="http://hasthemes.com/file/mail.php" method="post">
-                                    <div class="form-group__wrapper">
-                                        <div class="form-group">
-                                            <label>Ваше имя: <span class="required">*</span></label>
-                                            <input type="text" name="con_name" id="con_name" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Ваш телефон: <span class="required">*</span></label>
-                                            <input type="phone" name="con_phone" id="con_phone" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Ваш e-mail: <span class="required">*</span></label>
-                                            <input type="email" name="con_email" id="con_email" required>
-                                        </div>
-                                    </div>
-                                    
-                                  <div class="form-group__wrapper">
-                                    <div class="form-group form-group-2">
-                                        <label>Сообщение:</label>
-                                        <textarea name="con_message" id="con_message"></textarea>
-                                    </div>
-                                    </div>
-                                    
-                                    <div class="form-group">
-                                        <button type="submit" value="submit" id="submit" class="uren-contact-form_btn" name="submit">Отправить</button>
-                                    </div>
-                                </form> -->
+                               
                             </div>
                             <p class="form-messege"></p>
                         </div>

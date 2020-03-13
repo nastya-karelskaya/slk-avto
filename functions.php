@@ -61,6 +61,10 @@ function slk_avto_scripts() {
 
 	wp_enqueue_style( 'slk-avto-custom-singular-styles', get_template_directory_uri() . '/assets/assets/css/custom-singular.css', array('slk-avto-bootstrap', 'slk-avto-font-awesome', 'slk-avto-ion-fonts', 'slk-avto-slick', 'slk-avto-animate', 'slk-avto-jquery-ui', 'slk-avto-lightgallery', 'slk-avto-nice-select', 'slk-avto-styles-min', 'slk-avto-custom-styles', 'slk-avto-custom-delivery-and-price-styles', 'slk-avto-custom-about-us-styles', 'slk-avto-custom-catalog-styles', 'slk-avto-custom-subcatalog-styles', 'slk-avto-custom-beforeproductpage-styles'));
 
+	wp_enqueue_style( 'slk-avto-custom-404-styles', get_template_directory_uri() . '/assets/assets/css/custom-404.css', array('slk-avto-bootstrap', 'slk-avto-font-awesome', 'slk-avto-ion-fonts', 'slk-avto-slick', 'slk-avto-animate', 'slk-avto-jquery-ui', 'slk-avto-lightgallery', 'slk-avto-nice-select', 'slk-avto-styles-min', 'slk-avto-custom-styles', 'slk-avto-custom-delivery-and-price-styles', 'slk-avto-custom-about-us-styles', 'slk-avto-custom-catalog-styles', 'slk-avto-custom-subcatalog-styles', 'slk-avto-custom-beforeproductpage-styles', 'slk-avto-custom-singular-styles'));
+
+	wp_enqueue_style( 'slk-avto-custom-search-styles', get_template_directory_uri() . '/assets/assets/css/custom-search.css', array('slk-avto-bootstrap', 'slk-avto-font-awesome', 'slk-avto-ion-fonts', 'slk-avto-slick', 'slk-avto-animate', 'slk-avto-jquery-ui', 'slk-avto-lightgallery', 'slk-avto-nice-select', 'slk-avto-styles-min', 'slk-avto-custom-styles', 'slk-avto-custom-delivery-and-price-styles', 'slk-avto-custom-about-us-styles', 'slk-avto-custom-catalog-styles', 'slk-avto-custom-subcatalog-styles', 'slk-avto-custom-beforeproductpage-styles', 'slk-avto-custom-singular-styles', 'slk-avto-custom-404-styles'));
+
 
 /****************************************************/ 
 
@@ -116,10 +120,15 @@ add_action('after_setup_theme', 'slk_avto_menus');
 
 function slk_avto_menus() {
 	register_nav_menu('top', 'Главное меню');
-	register_nav_menu('bottom', 'Нижнее меню');
-	// register_nav_menu('right', 'боковое меню (базовое)');
 	register_nav_menu('mobile', 'Мобильное меню');
-	register_nav_menu('right_products', 'боковое меню (страница оборудования)');
+	register_nav_menu('bottom_left', 'Нижнее меню 1');
+	register_nav_menu('bottom_right', 'Нижнее меню 2');
+	// register_nav_menu('right', 'боковое меню (базовое)');
+	// register_nav_menu('bottom_left', 'боковое меню (базовое)');
+	// register_nav_menu('right', 'боковое меню (базовое)');
+	// register_nav_menu('right', 'боковое меню (базовое)');
+
+	//register_nav_menu('right_products', 'боковое меню (страница оборудования)');
 	// register_nav_menu('right_products_part', 'боковое меню (страница подкатегории оборудования)');
 	// register_nav_menu('right_services', 'боковое меню (страница услуг)');
 	// register_nav_menu('right_services_part', 'боковое меню (страница подкатегории услуг)');
@@ -166,42 +175,60 @@ add_action( 'admin_menu', 'remove_menu_items' );
 
 
 
-class My_Walker_Nav_Menu extends Walker_Nav_Menu {
-  function start_lvl( &$output, $depth = 0, $args = array() ) {
-    $indent = str_repeat("\t", $depth);
-    $output .= "\n$indent<ul class=\"hm-dropdown\">\n";
-  }
-}
+// class My_Walker_Nav_Menu extends Walker_Nav_Menu {
+//   function start_lvl( &$output, $depth = 0, $args = array() ) {
+//     $indent = str_repeat("\t", $depth);
+//     $output .= "\n$indent<ul class=\"hm-dropdown\">\n";
+//   }
+// }
 
-add_action( 'widgets_init', 'register_my_widgets' );
-function register_my_widgets(){
-	register_sidebar( array(
-		'name'          => 'Боковое меню Подкатегории',
-		'id'            => "sidebar-subcategory",
-		'description'   => '',
-		'class'         => '',
-		'before_widget' => '<li id="%1$s" class="widget %2$s">',
-		'after_widget'  => "</li>\n",
-		'before_title'  => '<h2 class="widgettitle">',
-		'after_title'   => "</h2>\n",
-	) );
-}
+// add_action( 'widgets_init', 'register_my_widgets' );
+// function register_my_widgets(){
+// 	register_sidebar( array(
+// 		'name'          => 'Боковое меню Подкатегории',
+// 		'id'            => "sidebar-subcategory",
+// 		'description'   => '',
+// 		'class'         => '',
+// 		'before_widget' => '<li id="%1$s" class="widget %2$s">',
+// 		'after_widget'  => "</li>\n",
+// 		'before_title'  => '<h2 class="widgettitle">',
+// 		'after_title'   => "</h2>\n",
+// 	) );
+// }
 
 
 
 /****************** header widgets */
-function register_slk_header_widgets(){
-	register_sidebar( array(
-		'name' => 'Информация в заголовке сайта',
-		'id' => 'header-info',
-		'description' => 'Выводиться в "шапке" сайта.',
-		'before_widget' => '<li class="header-info-widget-block">',
-		'after_widget' => '</li>',
-		'before_title' => '<h2 class="widgettitle">',
-		'after_title' => '</h2>',
-	) );
-}
-add_action( 'widgets_init', 'register_slk_header_widgets' );
+// function register_slk_header_widgets(){
+// 	register_sidebar( array(
+// 		'name' => 'Информация в заголовке сайта',
+// 		'id' => 'header-info',
+// 		'description' => 'Выводиться в "шапке" сайта.',
+// 		'before_widget' => '<li class="header-info-widget-block">',
+// 		'after_widget' => '</li>',
+// 		'before_title' => '<h2 class="widgettitle">',
+// 		'after_title' => '</h2>',
+// 	) );
+// }
+// add_action( 'widgets_init', 'register_slk_header_widgets' );
+
+/****************** footer widgets (sidebar) */
+// function register_slk_footer_widgets(){
+// 	register_sidebar( array(
+// 		'name' => 'Информация о сайте в нижнем меню',
+// 		'id' => 'footer-info',
+// 		'description' => 'Выводиться в "подвале" сайта.',
+// 		'before_widget' => '<li class="footer-info-widget-block">',
+// 		'after_widget' => '</li>',
+// 		'before_title' => '<h2 class="widgettitle">',
+// 		'after_title' => '</h2>',
+// 	) );
+// }
+// add_action( 'widgets_init', 'register_slk_footer_widgets' );
+
+
+
+
 
 
 ////****** Add fields in settings  */
@@ -309,7 +336,77 @@ function myprefix_vk_setting_callback_function( $val ){
 }
 
 
+function add_address_field_to_general_admin_page(){
+	$option_name = 'slk_address';
+
+	// регистрируем опцию
+	register_setting( 'general', $option_name );
+
+	// добавляем поле
+	add_settings_field( 
+		'myprefix_address_setting-id', 
+		'Адрес', 
+		'myprefix_address_setting_callback_function', 
+		'general', 
+		'default', 
+		array( 
+			'id' => 'myprefix_address_setting-id', 
+			'option_name' => 'slk_address' 
+		)
+	);
+}
+
+
+function myprefix_address_setting_callback_function( $val ){
+	$id = $val['id'];
+	$option_name = $val['option_name'];
+	?>
+	<input 
+		type="text" 
+		name="<? echo $option_name ?>" 
+		id="<? echo $id ?>" 
+		value="<? echo esc_attr( get_option($option_name) ) ?>" 
+	/> 
+	<?
+}
+
+function add_smalltext_field_to_general_admin_page(){
+	$option_name = 'slk_smalltext';
+
+	// регистрируем опцию
+	register_setting( 'general', $option_name );
+
+	// добавляем поле
+	add_settings_field( 
+		'myprefix_smalltext_setting-id', 
+		'Описание компании', 
+		'myprefix_smalltext_setting_callback_function', 
+		'general', 
+		'default', 
+		array( 
+			'id' => 'myprefix_smalltext_setting-id', 
+			'option_name' => 'slk_smalltext' 
+		)
+	);
+}
+
+
+function myprefix_smalltext_setting_callback_function( $val ){
+	$id = $val['id'];
+	$option_name = $val['option_name'];
+	?>
+	<input 
+		type="text" 
+		name="<? echo $option_name ?>" 
+		id="<? echo $id ?>" 
+		value="<? echo esc_attr( get_option($option_name) ) ?>" 
+	/> 
+	<?
+}
+
+add_action('admin_menu', 'add_smalltext_field_to_general_admin_page');
 add_action('admin_menu', 'add_email_field_to_general_admin_page');
+add_action('admin_menu', 'add_address_field_to_general_admin_page');
 add_action('admin_menu', 'add_phone_field_to_general_admin_page');
 add_action('admin_menu', 'add_vk_field_to_general_admin_page');
 
@@ -324,6 +421,68 @@ add_theme_support( 'custom-logo', [
 	'flex-height' => false,
 	'header-text' => '',
 ] );
+
+
+
+/************* Remove <BR>s in Contact Form 7 *******/
+// Contact Form 7 remove auto added p tags
+add_filter('wpcf7_autop_or_not', '__return_false');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -875,9 +1034,5 @@ add_theme_support( 'custom-logo', [
 
 
 
-
-/************* Remove <BR>s in Contact Form 7 *******/
-// Contact Form 7 remove auto added p tags
-add_filter('wpcf7_autop_or_not', '__return_false');
 
 ?>

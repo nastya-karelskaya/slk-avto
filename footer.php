@@ -24,12 +24,13 @@
                         <div class="col-lg-4">
                             <div class="footer-widgets_info">
                                 <div class="footer-widgets_logo">
-                                    <a href="#">
-                                        <img src="<?php echo get_template_directory_uri() . '/assets/assets/images/menu/logo/1.png';?>" alt="Uren's Footer Logo">
-                                    </a>
+                                    <!-- <a href="#">
+                                        <img src="<?php //echo get_template_directory_uri() . '/assets/assets/images/menu/logo/1.png';?>" alt="Uren's Footer Logo">
+                                    </a> -->
+                                    <?php echo get_custom_logo(); ?>
                                 </div>
                                 <div class="widget-short_desc">
-                                    <p>Продажа б\у запчастей для иномарок в Карелии и по всей России. </p>
+                                    <p><?php echo trim(get_option('slk_smalltext'));?> </p>
                                 </div>
                                 <!-- <div class="widgets-essential_stuff">
                                     <ul>
@@ -43,10 +44,11 @@
                                         <li class="uren-email"><span>Email:</span> <a href="mailto://info@yourdomain.com">info@yourdomain.com</a></li>
                                     </ul>
                                 </div> -->
+                                <?php if(get_option('slk_vk')){ ?>
                                 <div class="uren-social_link">
                                     <ul>
                                         <li class="vk">
-                                            <a href="https://vk.com/slkavto" data-toggle="tooltip" target="_blank" title="Мы в ВКонтакте">
+                                            <a href="<?php echo trim(get_option('slk_vk'));?>" data-toggle="tooltip" target="_blank" title="Мы в ВКонтакте">
                                                 <i class="fab fa-vk"></i>
                                             </a>
                                         </li>
@@ -54,6 +56,7 @@
                                         
                                     </ul>
                                 </div>
+                                <?php } ?>
                             </div>
                         </div>
                         <div class="col-lg-8">
@@ -61,16 +64,36 @@
                                 <div class="row">
                                     <div class="col-lg-4 col-md-6">
                                         <div class="footer-widgets_title">
-                                            <h3>Каталог</h3>
+                                        
+                                            <h3><?php echo wp_get_nav_menu_name('bottom_left');?></h3>
                                         </div>
-                                        <!-- <div class="footer-widgets">
-                                            <ul>
+                                        
+                                        <div class="footer-widgets">
+                                        <?php wp_nav_menu( [
+                                            'theme_location'  => 'bottom_left',
+                                            'menu'            => '', 
+                                            'container'       => 'ul', 
+                                            'container_class' => '', 
+                                            // 'container_id'    => '',
+                                            'menu_class'      => '', 
+                                            'menu_id'         => '',
+                                            'echo'            => true,
+                                            'fallback_cb'     => 'wp_page_menu',
+                                            'before'          => '',
+                                            'after'           => '',
+                                            'link_before'     => '',
+                                            'link_after'      => '',
+                                            'items_wrap'      => '<ul>%3$s</ul>',
+                                            'depth'           => 0,
+                                            'walker'          => '',
+                                        ] );?>
+                                            <!-- ul>
                                                 <li><a href="javascript:void(0)">About Us</a></li>
                                                 <li><a href="javascript:void(0)">Delivery Information</a></li>
                                                 <li><a href="javascript:void(0)">Privacy Policy</a></li>
                                                 <li><a href="javascript:void(0)">Terms & Conditions</a></li>
-                                            </ul>
-                                        </div> -->
+                                            </ul -->
+                                        </div>
                                     </div>
                                     <!-- <div class="col-lg-4 col-md-6">
                                         <div class="footer-widgets_title">
@@ -86,13 +109,27 @@
                                     </div> -->
                                     <div class="col-lg-4 col-md-6">
                                         <div class="footer-widgets_title">
-                                            <h3>Для клиентов</h3>
+                                            <h3><?php echo wp_get_nav_menu_name('bottom_right');?></h3>
                                         </div>
                                         <div class="footer-widgets">
-                                            <ul>
-                                                <li><a href="javascript:void(0)">О нас</a></li>
-                                                <li><a href="javascript:void(0)">Доставка и оплата</a></li>
-                                            </ul>
+                                        <?php wp_nav_menu( [
+                                            'theme_location'  => 'bottom_right',
+                                            'menu'            => '', 
+                                            'container'       => 'ul', 
+                                            'container_class' => '', 
+                                            // 'container_id'    => '',
+                                            'menu_class'      => '', 
+                                            'menu_id'         => '',
+                                            'echo'            => true,
+                                            'fallback_cb'     => 'wp_page_menu',
+                                            'before'          => '',
+                                            'after'           => '',
+                                            'link_before'     => '',
+                                            'link_after'      => '',
+                                            'items_wrap'      => '<ul>%3$s</ul>',
+                                            'depth'           => 0,
+                                            'walker'          => '',
+                                        ] );?>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-6">
@@ -102,9 +139,11 @@
                                         <div class="footer-widgets footer-widgets__contacts">
                                             <ul>
                                                 
-                                                <li><a href="tel:89114169740"><i class="ion-android-call"></i>+79114169740</a></li>
-                                                <li><a href="mailto:slk-avto@yandex.ru"><i class="fa fa-map-marker"></i>пр.Лесной,51 стр.18, Петрозаводск</a></li>
-                                                <li><a href="mailto:slk-avto@yandex.ru"><i class="fa fa-envelope"></i>slk-avto@yandex.ru</a></li>
+                                                <li><a href="tel:<?php echo trim(get_option('slk_phone'));?>"><i class="ion-android-call"></i><?php echo trim(get_option('slk_phone'));?></a></li>
+                                                <li><i class="fa fa-map-marker"></i>
+                                                <?php echo trim(get_option('slk_address'));?>
+                                                </li>
+                                                <li><a href="mailto:<?php echo trim(get_option('slk_email'));?>"><i class="fa fa-envelope"></i><?php echo trim(get_option('slk_email'));?></a></li>
                                                 
                                               
                                             </ul>

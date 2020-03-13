@@ -7,7 +7,7 @@
  * @package slk-avto
  */
 
-get_header('common');
+get_header();
 ?>
 
         <!-- Begin Uren's Breadcrumb Area -->
@@ -33,14 +33,22 @@ get_header('common');
                             <h1>404</h1>
                             <h2>СТРАНИЦА НЕ НАЙДЕНА</h2>
                             <p class="short_desc">Извините, но страницы, которую вы ищете, больше нет. Попробуйте воспользоваться поиском:</p>
-                            <form action="javascript:void(0)" class="error-form">
+                            <!-- <form action="javascript:void(0)" class="error-form">
                                 <div class="inner-error_form">
                                     <input type="text" placeholder="Найти..." class="error-input-text">
                                     <button type="submit" class="error-search_btn"><i class="fa fa-search"></i></button>
                                 </div>
-                            </form>
+                            </form> -->
+                            
+                            <div class="error-page__search-form">
+                                <?php 
+                                    get_search_form(); 
+                                ?>
+                            </div>
+                            
+                            
                             <div class="uren-btn-ps_center"></div>
-                            <a href="index.html" class="uren-error_btn">На Главную</a>
+                            <a href="<?php echo get_site_url();?>" class="uren-error_btn">На Главную</a>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,44 @@
+.search-area-wrapper h2 {
+  font-size: 25px;
+}
+
+.search-page__search-form {
+  width: 60%;
+  margin: 20px auto 20px auto;
+}
+
+.search-page__search-form .uren-btn-ps_center {
+  margin-top: 20px;
+}
+
+
+.search-page__search-result {
+  // background: #ffffff;
+  padding: 30px 20px;
+  margin-bottom: 20px;
+  width: 33%;
+  display: inline-block;
+  border: 1px solid #999999;
+
+}
+
+.search-page__search-results {
+  margin-top: 25px;
+}
+
+.search-page__search-result h3 {
+  
+}
+
+.search-page__search-result a {
+  border-radius: 5px ;
+    text-transform: uppercase;
+    background: #ffc400;
+   padding: 10px 20px;
+    display: block;
+    margin-top: 25px;
+    color: #ffffff;
+    font-weight: bold;
+
+}
+

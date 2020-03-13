@@ -8,8 +8,8 @@
 
 </form> -->
 
-  <form action="#" class="hm-searchbox">
-      <input type="text" placeholder="Поиск по номеру ...">
+  <form action="#" class="hm-searchbox" role="search" method="get" id="searchform" action="<?php echo home_url( '/' ) ?>">
+      <input type="text" placeholder="Поиск по номеру ..." value="<?php echo get_search_query() ?>" name="s" id="s">
       <button class="header-search_btn" type="submit"><i
-          class="ion-ios-search-strong"><span>Поиск</span></i></button>
+          class="ion-ios-search-strong"><span></span></i></button>
   </form>

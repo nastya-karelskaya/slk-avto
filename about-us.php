@@ -8,17 +8,17 @@ Template Post Type: page
 <!-- Здесь html/php код шаблона -->
 
 <?php 
-get_header('common');
+get_header();
 ?>
        
    <!-- Begin Uren's Breadcrumb Area -->
-   <div class="breadcrumb-area about-us_breadcrumbs">
+   <div class="breadcrumb-area about-us_breadcrumbs" style="background: url(<?php echo get_field('about_page_top_photo');?>) center no-repeat cover;">
         <div class="container">
             <div class="breadcrumb-content">
-                <h1>О нас</h1>
+                <h1><?php the_title();?></h1>
                 <ul>
-                    <li><a href="index.html">Главная</a></li>
-                    <li class="active">О нас</li>
+                    <li><a href="<?php echo get_site_url();?>">Главная</a></li>
+                    <li class="active"><?php the_title();?></li>
                 </ul>
             </div>
         </div>
@@ -31,14 +31,20 @@ get_header('common');
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5 col-md-4">
-                        <div class="overview-img text-center "></div>
-                        <div class="overview-img text-center "></div>
+                        <div class="overview-img text-center " style="background: url(<?php echo get_field('about_page_photo_1');?>) center no-repeat cover;"></div>
+                        <div class="overview-img text-center " style="background: url(<?php echo get_field('about_page_photo_2');?>) center no-repeat cover;"></div>
                     </div>
                     <div class="col-lg-7 col-md-8 d-flex align-items-center">
                         <div class="overview-content">
                             <!-- <h2>Welcome To <span>Uren's</span> Store!</h2> -->
-                            <p class="short_desc">Slk -avto предоставляет запчасти для иномарок популярных производителей.</p>
-                            <p class="short_desc">Большой ассортимент запчастей в наличии и под заказ!</p>
+                            <p class="short_desc">
+                            <?php 
+                                
+                                echo get_field('about_page_text');
+                                ?>
+                        
+                            </p>
+                           
 
                              <!-- Begin Uren's Shipping Area -->
                             <div class="uren-shipping_area cars-grid-area about-us_car-grid">
@@ -47,461 +53,64 @@ get_header('common');
                                     <div class="shipping-nav cars-grid-nav">
                                         <div class="row no-gutters">
                                             <div class="shipping-grid cars-grid">
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Acura</a>
-                                                    </div>
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Alfa Romeo</a>
-                                                    </div>
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Aston Martin</a>
-                                                    </div>
-                                            
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Audi</a>
-                                                    </div>
-                                            
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Bentley</a>
-                                                    </div>
-                                            
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">BMW</a>
-                                                    </div>
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Brilliance</a>
-                                                    </div>
-                                            
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">BYD</a>
-                                                    </div>
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Cadillac</a>
-                                                    </div>
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Chery</a>
-                                                    </div>
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Chevrolet</a>
-                                                    </div>
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Chrysler</a>
-                                                    </div>
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Citroen</a>
-                                                    </div>
-                                                
-                                            
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Daewoo</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Daihatsu</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Datsun</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Dodge</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Dongfeng</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">FAW</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Fiat</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Ford</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Ford America</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">GAZ</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Geely</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Genesis</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">GM</a>
-                                                    </div>
-                                                    
-                                            
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Great Wall</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Hafei</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Hava</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Honda</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Hummer</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Hyundai</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Infiniti</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Iran Khodro</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Isuzu</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Iveco</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Jaguar</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Jeep</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Kia</a>
-                                                    </div>
-                                                
-                                            
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Lamborghini</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Lancia </a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Land Rover</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">LDV</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Lexus</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Lifan</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">LuxGen</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Maserati</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Maybach</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Mazda</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Mercedes Benz</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Mini</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Mitsubishi</a>
-                                                    </div>
-                                                
-                                            
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Nissan</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Opel</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Peugeot</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Porsche</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Ravon</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Renault</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Rolls-Royce</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Rover</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">SAAB</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Scion</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Seat</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Skoda</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Smart</a>
-                                                    </div>
-                                                
-                                            
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Ssang Yong</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Subaru</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Suzuki</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">TAGAZ</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Tesla</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Toyota</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">UAZ</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">VAZ</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Volvo</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">VW</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">ZAZ</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Zotye</a>
-                                                    </div>
-                                                
+
+                                            <?php 
+                                                $categories = get_categories( [
+                                                    'taxonomy'     => 'category',
+                                                    'type'         => 'post',
+                                                    'child_of'     => 34,
+                                                    'parent'       => 34,
+                                                    'orderby'      => 'name',
+                                                    'order'        => 'ASC',
+                                                    'hide_empty'   => 0,
+                                                    'hierarchical' => 0,
+                                                    'exclude'      => '',
+                                                    'include'      => '',
+                                                    'number'       => 0,
+                                                    'pad_counts'   => false,
+                                                    // полный список параметров смотрите в описании функции http://wp-kama.ru/function/get_terms
+                                                ] );
+
+                                                if( $categories ) {
+                                                    foreach( $categories as $cat ) {
+
+                                            ?>
+                                                
+                                                    
+                                                    <div class="shipping-content">
+                                                        <a href="<?php echo '/' . $cat->slug; ?>"><?php echo $cat->name; ?></a>
+                                                    </div>
+
+
+                                            <?php 
+
+                    
+                                                // Данные в объекте $cat
+
+                                                // $cat->term_id
+                                                // $cat->name (Рубрика 1)
+                                                // $cat->slug (rubrika-1)
+                                                // $cat->term_group (0)
+                                                // $cat->term_taxonomy_id (4)
+                                                // $cat->taxonomy (category)
+                                                // $cat->description (Текст описания)
+                                                // $cat->parent (0)
+                                                // $cat->count (14)
+                                                // $cat->object_id (2743)
+                                                // $cat->cat_ID (4)
+                                                // $cat->category_count (14)
+                                                // $cat->category_description (Текст описания)
+                                                // $cat->cat_name (Рубрика 1)
+                                                // $cat->category_nicename (rubrika-1)
+                                                // $cat->category_parent (0)
+
+                                                    }
+                                                }
+
+                                                ?>
+
+
+
                                             </div>    
                                         </div>
                                     </div>
@@ -524,7 +133,7 @@ get_header('common');
         <!-- Uren's About Us Area End Here -->
 
         <!-- Begin Uren's Project Countdown Area -->
-        <div class="project-count-area about-us_count">
+        <div class="project-count-area about-us_count" style="background: url(<?php echo get_field('about_page_service_photo');?>) center no-repeat cover;">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -555,14 +164,29 @@ get_header('common');
                                         <i class="fas fa-cogs"></i>
                                    
                                     <h4>
-                                        Кузовной ремонт:
+                                    <?php echo get_field('about_page_service_1_title');?>
+                             
                                     </h4>
 
                                 </div>
                                 <ul class="about-us_service-list">
-                                    <li>Восстановление геометрии </li>
-                                    <li>Подготовка к покраске</li>
-                                    <li>Покраска в камере</li>
+                                <?php 
+                                    $about_page_services = get_field('about_page_service_1');
+                                    if($about_page_services) {
+                                        //foreach($about_page_services as $about_page_service) {
+                                            foreach($about_page_services as $key => $value) {
+                                        
+
+
+                                        if($value != '') {
+                                            echo '<li>' . $value . '</li>';
+                                        }
+                                    
+                                   
+                                           
+                                        }
+                                    }
+                                ?>
                                     
                                 </ul>
                             </div>
@@ -572,22 +196,76 @@ get_header('common');
                                         <i class="fas fa-cogs"></i>
                                  
                                     <h4>
-                                        Слесарные работы:
+                                    <?php echo get_field('about_page_service_2_title');?>
+                                    </h4>
+
+                                </div>
+                                
+                                <ul class="about-us_service-list">
+                                <?php 
+                                    $about_page_services = get_field('about_page_service_1');
+                                    if($about_page_services) {
+                                        //foreach($about_page_services as $about_page_service) {
+                                            foreach($about_page_services as $key => $value) {
+                                        
+
+
+                                        if($value != '') {
+                                            echo '<li>' . $value . '</li>';
+                                        }
+                                    
+                                   
+                                           
+                                        }
+                                    }
+                                ?>
+                                
+                                </ul>
+                            </div>
+
+
+                            <?php 
+
+                            $service_3 = get_field('about_page_service_3_title');
+                            if($service_3) {
+
+                            ?>
+                            <div class=" about-us_service text-left">
+                                <div class="short_desc">
+                               
+                                        <i class="fas fa-cogs"></i>
+                                 
+                                    <h4>
+                                    <?php echo $service_3;?>
                                     </h4>
 
                                 </div>
                                 <ul class="about-us_service-list">
-                                    <li>
-                                        Ремонт подвески
+                                <?php 
+                                    $about_page_services = get_field('about_page_service_1');
+                                    if($about_page_services) {
+                                        //foreach($about_page_services as $about_page_service) {
+                                            foreach($about_page_services as $key => $value) {
                                         
-                                     </li>
-                                    <li>Диагностика</li>
-                                    <li>Развал-схождение</li>
-                                    <li>Ремонт агрегатов</li>
-                                    <li>ТО</li>
+
+
+                                        if($value != '') {
+                                            echo '<li>' . $value . '</li>';
+                                        }
+                                    
+                                   
+                                           
+                                        }
+                                    }
+                                ?>
                                 
                                 </ul>
                             </div>
+
+                            <?php 
+                            }
+
+                            ?>
                        
                     </div>
 
@@ -613,460 +291,65 @@ get_header('common');
                                     <div class="shipping-nav">
                                         <div class="row no-gutters">
                                             <div class="shipping-grid">
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Acura</a>
-                                                    </div>
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Alfa Romeo</a>
-                                                    </div>
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Aston Martin</a>
-                                                    </div>
-                                            
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Audi</a>
-                                                    </div>
-                                            
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Bentley</a>
-                                                    </div>
-                                            
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">BMW</a>
-                                                    </div>
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Brilliance</a>
-                                                    </div>
-                                            
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">BYD</a>
-                                                    </div>
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Cadillac</a>
-                                                    </div>
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Chery</a>
-                                                    </div>
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Chevrolet</a>
-                                                    </div>
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Chrysler</a>
-                                                    </div>
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Citroen</a>
-                                                    </div>
-                                                
-                                            
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Daewoo</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Daihatsu</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Datsun</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Dodge</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Dongfeng</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">FAW</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Fiat</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Ford</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Ford America</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">GAZ</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Geely</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Genesis</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">GM</a>
-                                                    </div>
-                                                    
-                                            
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Great Wall</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Hafei</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Hava</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Honda</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Hummer</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Hyundai</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Infiniti</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Iran Khodro</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Isuzu</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Iveco</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Jaguar</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Jeep</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Kia</a>
-                                                    </div>
-                                                
-                                            
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Lamborghini</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Lancia </a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Land Rover</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">LDV</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Lexus</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Lifan</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">LuxGen</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Maserati</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Maybach</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Mazda</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Mercedes Benz</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Mini</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Mitsubishi</a>
-                                                    </div>
-                                                
-                                            
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Nissan</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Opel</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Peugeot</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Porsche</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Ravon</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Renault</a>
-                                                    </div>
-                                                
-                                                
+
+                                            <?php 
+                                                // $categories = get_categories( [
+                                                //     'taxonomy'     => 'category',
+                                                //     'type'         => 'post',
+                                                //     'child_of'     => 34,
+                                                //     'parent'       => '',
+                                                //     'orderby'      => 'name',
+                                                //     'order'        => 'ASC',
+                                                //     'hide_empty'   => 0,
+                                                //     'hierarchical' => 0,
+                                                //     'exclude'      => '',
+                                                //     'include'      => '',
+                                                //     'number'       => 0,
+                                                //     'pad_counts'   => false,
+                                                //     // полный список параметров смотрите в описании функции http://wp-kama.ru/function/get_terms
+                                                // ] );
+
+                                                if( $categories ) {
+                                                    foreach( $categories as $cat ) {
+
+                                            ?>
+                                                
+                                           
+
+                                                    <div class="shipping-content">
+                                                        <a href="<?php echo '/' . $cat->slug; ?>"><?php echo $cat->name; ?></a>
+                                                    </div>
+
+
+                                            <?php 
+
+                    
+                                                // Данные в объекте $cat
+
+                                                // $cat->term_id
+                                                // $cat->name (Рубрика 1)
+                                                // $cat->slug (rubrika-1)
+                                                // $cat->term_group (0)
+                                                // $cat->term_taxonomy_id (4)
+                                                // $cat->taxonomy (category)
+                                                // $cat->description (Текст описания)
+                                                // $cat->parent (0)
+                                                // $cat->count (14)
+                                                // $cat->object_id (2743)
+                                                // $cat->cat_ID (4)
+                                                // $cat->category_count (14)
+                                                // $cat->category_description (Текст описания)
+                                                // $cat->cat_name (Рубрика 1)
+                                                // $cat->category_nicename (rubrika-1)
+                                                // $cat->category_parent (0)
+
+                                                    }
+                                                }
+
+                                                ?>
+
+                
                                                     
-                                                    <div class="shipping-content">
-                                                        <a href="#">Rolls-Royce</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Rover</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">SAAB</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Scion</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Seat</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Skoda</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Smart</a>
-                                                    </div>
-                                                
-                                            
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Ssang Yong</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Subaru</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Suzuki</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">TAGAZ</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Tesla</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Toyota</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">UAZ</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">VAZ</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Volvo</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">VW</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">ZAZ</a>
-                                                    </div>
-                                                
-                                                
-                                                    
-                                                    <div class="shipping-content">
-                                                        <a href="#">Zotye</a>
-                                                    </div>
                                                 
                                             </div>    
                                         </div>
@@ -1114,15 +397,17 @@ get_header('common');
                     <div class="col-lg-5  col-md-12">
                         <div class="contact-page-side-content">
                             <h3 class="contact-page-title">Как сделать заказ?</h3>
-                            <p class="contact-page-message">Для заказа или уточнения наличия запчастей вы можете связаться с нами любым удобным способом:
+                            <p class="contact-page-message">
+                            <?php echo get_field('about_page_form_text'); ?>
+                            
                             </p>
                             <div class="single-contact-block">
                                 <h4><i class="ion-android-call"></i>Позвонить по телефону</h4>
-                                <a href="tel:89114169740"> +79114169740</a>
+                                <a href="tel:<?php echo trim(get_option('slk_phone'));?>"> <?php echo trim(get_option('slk_phone'));?></a>
                             </div>
                             <div class="single-contact-block">
                                 <h4><i class="fab fa-vk"></i>Оставить сообщение в группе в</h4>
-                                <a href="https://vk.com/slkavto" target="_blank">ВКонтакте</a>
+                                <a href="<?php echo trim(get_option('slk_vk'));?>" target="_blank">ВКонтакте</a>
                             </div>
                             <div class="single-contact-block last-child">
                                 <h4><i class="fas fa-envelope"></i>Заполнить форму справа.</h4>
